@@ -1,0 +1,70 @@
+.info-code {
+  padding: 1rem;
+}
+
+.code {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: white;
+}
+
+.code span {
+  background-color: #000;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.blue {
+  color: #00e1ff;
+}
+
+.yellow {
+  color: yellow
+}
+
+.green {
+  color: greenyellow;
+}
+
+.pink {
+  color: pink
+}
+
+@keyframes leftIn {
+  from  {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightIn {
+  from {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in
+}
+
+.leftIn {
+  animation-name: leftIn;
+}
+
+.rightIn {
+  animation-name: rightIn;
+}

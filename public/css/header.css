@@ -1,0 +1,38 @@
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: white;
+  z-index: 10;  
+}
+
+.header-content {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.colored-border {
+  height: 5px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.logo {
+  width: 300px;
+  transition: width 0.5s;
+}
+
+@media (min-width: 700px) {
+  .logo {
+    width: 500px;
+  }
+
+  .small {
+    width: 300px;
+  }
+  
+  main {
+    margin-top: 110px;
+  }
+}

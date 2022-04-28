@@ -1,0 +1,30 @@
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./info-code.css');
+@import url('./button.css');
+@import url('./illustrations.css');
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-color);
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  padding-top: 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+

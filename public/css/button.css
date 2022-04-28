@@ -1,0 +1,51 @@
+.btn {
+  position: relative;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn__layer {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 12px;
+}
+
+.btn__deep {
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
+  transform: translateY(2px);
+}
+
+.btn__shadow {
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
+  transform: translateY(4px);
+  filter: blur(4px);
+}
+
+.btn__front {
+  position: relative;
+  padding: 1rem;
+  transition: transform 0.1s;
+  display: block;
+  background-color: white;
+  border-radius: 12px;
+  transform: translateY(-6px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover .btn__front {
+  transform: translateY(-4px)
+}
+
+.btn:active .btn__front {
+  transform: translateY(0px);
+}
