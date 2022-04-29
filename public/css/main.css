@@ -2,16 +2,15 @@
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./info-code.css');
-@import url('./button.css');
 @import url('./illustrations.css');
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: var(--bg-color);
+  background-color: var(--pw-bg-color);
 }
 
 main {
-  padding: 1rem 2rem;
+  padding: var(--pw-spacing);
 }
 
 h1 {

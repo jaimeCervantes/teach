@@ -22,7 +22,7 @@ class PwButton extends HTMLElement {
       }
       
       :host(:hover) .front {
-        transform: translateY(-4px)
+        transform: translateY(-4px);
       }
       
       :host(:active) .front {
@@ -40,12 +40,12 @@ class PwButton extends HTMLElement {
       }
       
       .deep {
-        background: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
+        background: var(--pw-button-bg-deep, linear-gradient(43deg, #4158D0 0%, #C850C0 100%));
         transform: translateY(2px);
       }
       
       .shadow {
-        background: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
+        background: var(--pw-button-bg-deep, linear-gradient(43deg, #4158D0 0%, #C850C0 100%));
         transform: translateY(4px);
         filter: blur(4px);
       }

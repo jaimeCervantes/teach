@@ -1,5 +1,5 @@
 export class PwDialog extends HTMLElement {
-  static is() {
+  static get is() {
     return 'pw-dialog';
   }
 

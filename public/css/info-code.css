@@ -1,5 +1,5 @@
 .info-code {
-  padding: 1rem;
+  padding: var(--pw-spacing);
 }
 
 .code {
