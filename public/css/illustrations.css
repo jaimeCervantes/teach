@@ -5,7 +5,7 @@
 .illustration {
   border-radius: 50%;
   padding: 3px;
-  margin-block-end: 1rem;
+  margin-block-end: var(--pw-spacing, 1rem);
   margin-inline-start: auto;
   margin-inline-end: auto;
   width: fit-content;
@@ -14,9 +14,6 @@
 }
 
 .woman-thinking {
-  width: 400px;
-  height: 400px;
   border-radius: 50%;
-  background-image: url('../images/woman-thinking_400.jpg');
-  background-size: cover;
+  display: block;
 }

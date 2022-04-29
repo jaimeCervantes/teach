@@ -17,12 +17,12 @@ header {
 }
 
 .logo {
-  width: 350px;
+  width: 300px;
   transition: width 0.5s;
 }
 
 .small {
-  width: 250px;
+  width: 200px;
 }
 
 @media (min-width: 700px) {
