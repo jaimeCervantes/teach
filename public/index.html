@@ -8,6 +8,7 @@
   <title>Pensemos web: clases GRATIS</title>
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/main.js" type="module"></script>
+  <script src="./js/PwButton.js" type="module"></script>
 </head>
 <body>
   <header>
@@ -32,11 +33,9 @@
       <span class="green">ask</span><span class="pink">(</span><span>'¿Te gustaria ayudar a mejorar la salud de las personas de tu comunidad?'</span><span class="pink">);</span>
     </p>
     <div class=" animate leftIn" style="text-align: center;margin-bottom: 2rem;">
-      <button class="btn" id="free">
-        <span class="btn__layer btn__shadow"></span>
-        <span class="btn__layer btn__deep"></span>
-        <span class="btn__front">GRATIS</span>
-      </button>
+      <pw-button id="free">
+        GRATIS
+      </pw-button>
     </div>
   </article>
   <main>
@@ -47,7 +46,7 @@
         </div>
       </div>
     </section>
-
+    
     <pw-dialog></pw-dialog>
   </main>
 </body>

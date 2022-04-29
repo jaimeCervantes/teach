@@ -29,15 +29,16 @@ function changeLogoWidth() {
 }
 
   const btn = document.getElementById('free');
-  const btnFront = btn.querySelector('.btn__front');
+  const btnInner = btn.innerHTML;
   
   btn.addEventListener('click', async (e) => {
-    const btnFronInner = btnFront.innerHTML;
+    e.target.innerHTML = 'Cargando...';
+    const constr = customElements.get('pw-dialog');
+    
+    if (constr === undefined) {
+      const { PwDialog } = await import('./PwDialog.js')
+      customElements.define(PwDialog.is, PwDialog);
+    }
 
-    e.target.parentNode.querySelector('.btn__front').innerHTML = 'Cargando...';
-    
-    const { PwDialog } = await import('./PwDialog.js');
-    customElements.define(PwDialog.is(), PwDialog);
-    
-    btnFront.innerHTML = btnFronInner;
+    btn.innerHTML = btnInner;
   });  
