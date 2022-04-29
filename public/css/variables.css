@@ -1,5 +1,6 @@
 html {
   --pw-bg-color: white;
+  --pw-bg-edge-color: #4158D0;
   --pw-bg-edge: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   --pw-button-deep-bg: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
   --pw-button-bg-shadow: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);

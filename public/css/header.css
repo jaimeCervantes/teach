@@ -12,13 +12,17 @@ header {
 
 .colored-border {
   height: 5px;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: var(--pw-bg-color-edge, #4158D0);
+  background-image: var(--pw-bg-edge);
 }
 
 .logo {
-  width: 300px;
+  width: 350px;
   transition: width 0.5s;
+}
+
+.small {
+  width: 250px;
 }
 
 @media (min-width: 700px) {
