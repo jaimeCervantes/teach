@@ -21,10 +21,6 @@ header {
   transition: width 0.5s;
 }
 
-.small {
-  width: 200px;
-}
-
 @media (min-width: 700px) {
   .logo {
     width: 500px;
