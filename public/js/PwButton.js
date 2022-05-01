@@ -23,11 +23,11 @@ class PwButton extends HTMLElement {
         }
         
         :host(:hover) .front {
-          transform: translateY(-4px);
+          transform: translateY(-3px);
         }
         
         :host(:active) .front {
-          transform: translateY(0px);
+          transform: translateY(1px) scale(0.98);
         }
         
         .layer {
@@ -37,7 +37,7 @@ class PwButton extends HTMLElement {
           width: 100%;
           height: 100%;
           position: absolute;
-          border-radius: 12px;
+          border-radius: 20px;
         }
         
         .deep {
@@ -57,8 +57,8 @@ class PwButton extends HTMLElement {
           padding: 1rem;
           transition: transform 0.1s;
           background-color: white;
-          border-radius: 12px;
-          transform: translateY(-6px);
+          border-radius: 17px;
+          transform: translateY(-5px);
           border: 1px solid rgba(0, 0, 0, 0.2);
         }
       </style>
