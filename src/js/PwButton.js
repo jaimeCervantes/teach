@@ -28,7 +28,7 @@ class PwButton extends HTMLElement {
         }
         
         :host(:active) .front {
-          transform: translateY(1px) scale(0.98);
+          transform: translateY(1px);
         }
         
         .layer {
@@ -49,7 +49,7 @@ class PwButton extends HTMLElement {
         .shadow {
           background: var(--pw-button-bg-deep, linear-gradient(43deg, #4158D0 0%, #C850C0 100%));
           transform: translateY(4px);
-          filter: blur(4px);
+          filter: blur(3px);
         }
         
         .front {
