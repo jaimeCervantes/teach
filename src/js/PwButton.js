@@ -20,6 +20,7 @@ class PwButton extends HTMLElement {
           user-select: none;
           -webkit-tap-highlight-color: transparent;
           color: black;
+          font-weight: bold;
         }
         
         :host(:hover) .front {

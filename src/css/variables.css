@@ -8,11 +8,13 @@ html {
   --pw-spacing: 1rem;
 }
 
+
 @media (prefers-color-scheme: dark) {
   html {
     --pw-bg-color: black;
     --pw-text-color: white;
   }
+
 }
 
 .dark {
