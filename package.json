@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html src/**/*.html --dist-dir docs"
+    "build": "parcel build src/index.html src/**/*.html --no-source-maps --public-url /teach/ --dist-dir docs"
   },
   "author": "jaime.cervantes.ve@gmail.com",
   "license": "ISC",
