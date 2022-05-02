@@ -7,8 +7,8 @@ const fileDir = dirname(filePath);
 
 const app = express();
 
-app.use(express.static(`${fileDir}/public`));
+app.use(express.static(`${fileDir}/docs`));
 
-app.listen(3000, () => {
-  console.log('Servidor listo en el puerto 3000');
+app.listen(3001, () => {
+  console.log('Servidor listo en el puerto 3001');
 });
