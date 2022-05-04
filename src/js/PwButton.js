@@ -12,7 +12,6 @@ class PwButton extends HTMLElement {
           display: inline-block;
           position: relative;
           background-color: transparent;
-          font-size: 2rem;
           padding: 0;
           border: none;
           cursor: pointer;
@@ -21,6 +20,7 @@ class PwButton extends HTMLElement {
           -webkit-tap-highlight-color: transparent;
           color: black;
           font-weight: bold;
+          text-transform: uppercase;
         }
         
         :host(:hover) .front {

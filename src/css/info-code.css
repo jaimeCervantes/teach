@@ -1,11 +1,17 @@
 .info-code {
-  --pw-spacing-code: 0.5rem;
   display: grid;
   gap: 1;
-  grid-template-columns: var(--pw-spacing) 1fr;
+  grid-template-columns: 1rem 1fr;
   background-color: black;
   padding: 0 var(--pw-spacing);
-  padding-top: var(--pw-spacing-code);
+  padding-top: var(--pw-code-spacing);
+  font-size: 14px;
+}
+
+.title {
+  margin: 0;
+  padding: var(--pw-spacing);
+  line-height: var(--pw-code-line-height);
 }
 
 .code-container {
@@ -20,15 +26,15 @@
 }
 
 .code, .line-number {
-  line-height: 1.4;
+  line-height: var(--pw-code-line-height);
   margin: 0;
-  margin-block-end: 0.5rem;
+  margin-block-end: var(--pw-code-spacing);
 }
 
 .code span {
   background-color: #000;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: var(--pw-code-spacing);
+  padding-bottom: var(--pw-code-spacing);
 }
 
 .line-number {

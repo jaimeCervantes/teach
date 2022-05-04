@@ -6,6 +6,8 @@ html {
   --pw-button-deep-bg: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
   --pw-button-bg-shadow: linear-gradient(43deg, #4158D0 0%, #C850C0 100%);
   --pw-spacing: 1rem;
+  --pw-code-line-height: 1.4;
+  --pw-code-spacing: 0.5rem;
 }
 
 
