@@ -1,23 +1,58 @@
-.info-code {
-  display: grid;
-  gap: 1;
-  grid-template-columns: 1rem 1fr;
-  background-color: black;
-  padding: 0 var(--pw-spacing);
-  padding-top: var(--pw-code-spacing);
+.code-editor {
   font-size: 14px;
+  border-radius: 5px;
 }
 
-.title {
-  margin: 0;
-  padding: var(--pw-spacing);
-  line-height: var(--pw-code-line-height);
+.title-bar {
+  display: flex;
+  gap: 0.5rem;
+  background-image: linear-gradient(135deg, blue, violet, orange);
+  padding: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-.code-container {
+.code-wrapper {
+  display: grid;
+  grid-template-columns: minmax(1rem, auto) 1fr;
+  padding: 1rem;
+  background-color: black;
+  border: var(--pw-code-editor-border);
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.line-numbers {
+  padding-right: 1rem;
+}
+
+.code-content {
   width: 100%;
   overflow-x: auto;
   background-color: #000;
+}
+
+.title-bar__btn {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50;
+  background-color: white;
+}
+
+.title-bar__btn--red {
+  background-color: rgb(255, 0, 106);
+  box-shadow: 0px 0px 2px red;
+}
+
+.title-bar__btn--yellow {
+  background-color: rgb(255, 208, 0);
+  box-shadow: 0px 0px 2px rgb(117, 117, 0)
+}
+
+.title-bar__btn--green {
+  background-color: rgb(33, 165, 0);
+  box-shadow: 0px 0px 2px rgb(20, 100, 0);
 }
 
 .code {
@@ -27,8 +62,6 @@
 
 .code, .line-number {
   line-height: var(--pw-code-line-height);
-  margin: 0;
-  margin-block-end: var(--pw-code-spacing);
 }
 
 .code span {
@@ -40,7 +73,6 @@
 .line-number {
   color: goldenrod;
   text-align: right;
-  padding-right: 1rem;
 }
 
 .blue {

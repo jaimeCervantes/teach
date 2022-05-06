@@ -1,7 +1,7 @@
 @import url('./variables.css');
 @import url('./reset.css');
 @import url('./header.css');
-@import url('./info-code.css');
+@import url('./code-editor.css');
 @import url('./illustrations.css');
 
 body {
@@ -17,6 +17,13 @@ main {
 
 h1 {
   font-size: 1.8rem;
+}
+
+.title {
+  margin: 0;
+  padding: var(--pw-inner-space);
+  line-height: var(--pw-code-line-height);
+  margin-bottom: var(--pw-spacing);
 }
 
 p {
