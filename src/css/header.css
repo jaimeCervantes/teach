@@ -17,7 +17,6 @@ header {
 }
 
 .logo {
-  width: 300px;
   transition: width 0.5s;
 }
 
@@ -28,9 +27,5 @@ header {
 
   .small {
     width: 300px;
-  }
-  
-  main {
-    margin-top: 110px;
   }
 }
