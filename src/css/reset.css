@@ -3,7 +3,7 @@
 }
 
 html, body {
-  font-size: 14px;
+  font-size: var(--pw-text-size, 16px);
   margin: 0;
   padding: 0;
 }
