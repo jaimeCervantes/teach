@@ -21,7 +21,6 @@
 
 .title-bar__btn--red {
   background-color: rgb(255, 0, 106);
-  
 }
 
 .title-bar__btn--yellow {
@@ -46,6 +45,7 @@
 
 pre {
   margin: 0.5rem 0;
+  color: var(--pw-code-color, white);
 }
 
 .line-numbers {
@@ -61,11 +61,6 @@ pre {
   width: 100%;
   overflow-x: auto;
   background-color: #000;
-}
-
-.pre-code {
-  position: relative;
-  color: var(--pw-code-color, white);
 }
 
 .code {
@@ -87,68 +82,27 @@ pre {
 }
 
 .pink {
-  color: pink
+  color: violet;
 }
 
-.animate {
-  animation-duration: 0.5s;
-  animation-delay: 0.5s;
+.typing {
+  overflow: hidden;
+  width: 3px;
+  border-right: 3px solid red;
+  animation-name: typing, blink-cursor;
+  animation-duration: 2s, 1s;
+  animation-timing-function: steps(26, end), ease-in;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes smallToBig {
-  from { transform: scale(0); }
-  50% { transform: scale(1.1); }
-  to { transform: scale(1); }
-}
-
-.smallToBig {
-  animation-name: smallToBig;
-  transform: scale(0);
-  animation-duration: 1s;
+  animation-delay: 3s, 0s;
+  animation-iteration-count: 1, infinite;
 }
 
 @keyframes typing {
-  from { width: 0; opacity: 1 }
-  to { width: 221px; opacity: 1; }
+  from { width: 0; }
+  to { width: 221px; }
 }
 
 @keyframes blink-cursor {
   from, to { border-color: transparent }
   50% { border-color: red }
-}
-
-.typing {
-  overflow: hidden;
-  opacity: 0;
-  width: 221px;
-  border-right: 3px solid red;
-  animation-name: typing, blink-cursor;
-  animation-duration: 2s, 1s;
-  animation-timing-function: steps(24, end), ease-in;
-  animation-fill-mode: forwards, both;
-  animation-delay: 2s, 1s;
-  animation-iteration-count: 1, infinite;
-}
-
-
-@keyframes leftIn {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1;}
-}
-
-@keyframes rightIn {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1;}
-}
-
-.leftIn {
-  animation-name: leftIn;
-  opacity: 0;
-}
-
-.rightIn {
-  animation-name: rightIn;
-  opacity: 0;
 }

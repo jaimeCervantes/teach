@@ -1,0 +1,39 @@
+.animate {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.smallToBig {
+  animation-name: smallToBig;
+  transform: scale(0);
+  animation-duration: 1s;
+}
+
+@keyframes smallToBig {
+  from { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+
+@keyframes leftIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes rightIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1;}
+}
+
+.leftIn {
+  animation-name: leftIn;
+  opacity: 0;
+}
+
+.rightIn {
+  animation-name: rightIn;
+  opacity: 0;
+}
