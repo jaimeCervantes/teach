@@ -17,15 +17,19 @@ header {
 }
 
 .logo {
+  width: 300px;
+  height: 48.42px;
   transition: width 0.5s;
 }
 
 @media (min-width: 700px) {
   .logo {
     width: 500px;
+    height: 80.7px;
   }
 
   .small {
     width: 300px;
+    height: 48.42px;
   }
 }

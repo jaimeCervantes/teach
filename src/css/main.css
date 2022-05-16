@@ -23,3 +23,10 @@ main {
   font-size: 1.8rem;
 }
 
+pw-button:not(:defined) {
+  display: inline-block;
+  height: 54px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
