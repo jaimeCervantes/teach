@@ -19,10 +19,14 @@ export class PwDialog extends HTMLElement {
     }
   }
 
-  attributeChangedCallback(attrName, prevVal, newVal) {
-    const attrHandler = this[`on_${attrName}Changed`].bind(this);
-    if (typeof attrHandler === 'function') {
-      attrHandler(attrName, prevVal, newVal);
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    if (newVal === oldVal) {
+      return;
+    }
+
+    const methodName = `on_${attrName.replace('-', '')}Changed`;
+    if (typeof this[methodName] === 'function') {
+      this[methodName](attrName, oldVal, newVal);
     }
   }
 
