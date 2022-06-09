@@ -32,7 +32,11 @@ export class PwDialog extends HTMLElement {
 
   on_openChanged() {
     const dialog = this.shadowRoot.querySelector('dialog');
-    dialog.toggleAttribute('open');
+    if (newVal !== null) {
+      dialog.setAttribute('open', '');
+    } else {
+      dialog.removeAttribute('open');
+    }
   }
 
   constructor() {
@@ -52,23 +56,14 @@ export class PwDialog extends HTMLElement {
 
 
 const template = document.createElement('template');
-template.innerHTML = `
+template.innerHTML = /*html*/`
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    :host {
-      display: block;
+    dialog {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    dialog {
-      width: 100%;
-      position: relative
+      margin: 0;
     }
   </style>
   <dialog>

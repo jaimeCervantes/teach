@@ -43,7 +43,7 @@ class PwButton extends HTMLElement {
     const loader = front.querySelector('.loader');
     const content = front.querySelector('.content');
 
-    if(newVal !== null) {
+    if (newVal !== null) {
       loader.classList.add('show', 'rotate');
       content.classList.add('hidden');
     } else {
@@ -53,7 +53,7 @@ class PwButton extends HTMLElement {
   }
 }
 
-const styles = `
+const styles = /* css */`
   :host {
     display: inline-block;
     position: relative;
@@ -142,7 +142,7 @@ const styles = `
 `;
 
 const template = document.createElement('template');
-template.innerHTML = `
+template.innerHTML = /* html */`
   <style>
     ${styles}
   </style>
