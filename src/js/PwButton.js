@@ -1,6 +1,13 @@
-class PwButton extends HTMLElement {
+import { PwElement } from './PwElement.js';
+
+class PwButton extends PwElement {
   static get is() {
     return 'pw-button';
+  }
+
+  constructor() {
+    super();
+    this.appendTemplate(template);
   }
 
   static get observedAttributes() {
@@ -19,23 +26,6 @@ class PwButton extends HTMLElement {
 
   get isLoading() {
     return this.hasAttribute('is-loading');
-  }
-
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-  }
-
-  attributeChangedCallback(attrName, oldVal, newVal) {
-    if (newVal === oldVal) {
-      return;
-    }
-
-    const methodName = `on_${attrName.replace('-', '')}Changed`;
-    if (typeof this[methodName] === 'function') {
-      this[methodName](attrName, oldVal, newVal);
-    }
   }
 
   on_isloadingChanged(attrName, oldVal, newVal) {
