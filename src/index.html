@@ -19,8 +19,7 @@
     </div>
     <div class="colored-border"></div>
   </header>
-
-  <section style="padding: var(--pw-spacing);">
+  <main>
     <h1>/* Aprende y crea aplicaciones */</h1>
     <section class="code-editor animate smallToBig">
       <div class="title-bar">
@@ -47,31 +46,38 @@
           <pre class="pre-code typing"><code class="code green">ask</code><code class="code pink">(</code><code>'¿Quieres aprender?'</code><code class="code pink">);   </code></pre>
         </div>
       </div>
+      <div style="text-align: center; margin-block: 2rem;">
+        <pw-button id="free">
+          ¿Por qué GRATIS? &#10067
+        </pw-button>
+      </div>
     </section>
-  </section>
-  <div style="text-align: center; margin-block: 2rem;">
-    <pw-button id="free">
-      ¿Por qué GRATIS? &#10067
-    </pw-button>
-  </div>
-  <main>
-    <section class="info">
-      <div class="illustrations-container">
-        <div class="illustration">
-          <img
-            src="./images/woman-thinking_400.jpg"
-            width="300"
-            height="300"
-            class="woman-thinking"
-            loading="lazy"
-          >
+    <section class="illustrations-container">
+      <div class="illustration">
+        <img
+          src="./images/woman-thinking_400.jpg"
+          width="300"
+          height="300"
+          class="woman-thinking"
+          loading="lazy"
+        >
       </div>
     </section>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, nemo porro qui placeat aspernatur quidem quisquam sed numquam? Autem quia a pariatur non ipsam aliquam inventore incidunt at animi cupiditate?
-    </p>
-    <pw-dialog open></pw-dialog>
+    <article>
+      <h1>/* ¿Cómo lo hacemos?' */</h1>
+
+      <p>Aplicando principios ágiles:</p>
+
+      <ol>
+        <li>Aprende en pasitos de bebé</li>
+        <li>Colabora en proyectos reales, aplica lo aprendido</li>
+        <li>Entrega tu contribución al proyecto y aumenta tu curriculum</li>
+        <li>Retroalimenta la experiencia obtenida hasta ahora</li>
+        <li>Detecta puntos de mejora y repite desde el paso 1</li>
+      </ol>
+    </article>
   </main>
+  <pw-dialog open></pw-dialog>
 </body>
 </html>
