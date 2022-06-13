@@ -109,14 +109,14 @@ const styles = /* css */`
     display: block;
   }
 
-  .loader {
+  .spinner {
     position: absolute;
     width: 24px;
     height: 24px;
     top: 50%;
     left: 50%;
     margin-left: -12px;
-    margin-top: -12px;
+    margin-top: -15px;
     border-radius: 50%;
     border: 2px solid rgba(200, 0, 0, 0.5);
     border-top-color: rgb(200, 0, 0);
@@ -143,7 +143,7 @@ template.innerHTML = /* html */`
     <span class="content">
       <slot></slot>
     </span>
-    <span class="loader hide"></span>
+    <span class="spinner hide"></span>
   </span>
 `;
 
