@@ -4,8 +4,8 @@
   "description": "Landing page about teaching web development for free",
   "type": "module",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html src/**/*.html --no-source-maps --public-url /teach/ --dist-dir docs"
+    "start": "parcel src/**/*.html",
+    "build": "parcel build src/*.html src/**/*.html --no-source-maps --public-url /teach/ --dist-dir docs"
   },
   "author": "jaime.cervantes.ve@gmail.com",
   "license": "ISC",
