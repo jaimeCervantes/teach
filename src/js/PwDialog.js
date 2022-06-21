@@ -6,7 +6,6 @@ export class PwDialog extends PwElement {
 
   constructor() {
     super();
-    this.appendTemplate(template);
   }
 
   static get observedAttributes() {
@@ -33,21 +32,21 @@ export class PwDialog extends PwElement {
       dialog.removeAttribute('open');
     }
   }
+
+  render () {
+    return /*html*/`
+    <style>
+      dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
+    </style>
+    <dialog>
+      <h1>Hola</h1>
+    </dialog>
+    `;
+  }
 }
-
-
-const template = document.createElement('template');
-template.innerHTML = /*html*/`
-  <style>
-    dialog {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-    }
-  </style>
-  <dialog>
-    <h1>Hola</h1>
-  </dialog>
-  `;

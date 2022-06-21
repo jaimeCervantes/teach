@@ -2,6 +2,7 @@ export class PwElement extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.appendTemplate(this.buildTemplate(this.render()));
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -13,6 +14,14 @@ export class PwElement extends HTMLElement {
     if (typeof this[methodName] === 'function') {
       this[methodName](attrName, oldVal, newVal);
     }
+  }
+
+  buildTemplate(tpl) {
+    const template = document.createElement('template');
+
+    template.innerHTML = tpl;
+
+    return template;
   }
 
   appendTemplate(template) {
