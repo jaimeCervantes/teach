@@ -1,0 +1,57 @@
+html {
+  font-size: 17px;
+  padding: 1rem;
+}
+header{
+  display: inline-block;
+
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem; 
+}
+p, time{
+  display: inline-block;
+  color: #fb5975;
+}
+p{
+  color: black;
+  font-size: 15;
+}
+#contenido{
+  border: 3px solid rgb(165, 168, 168);
+  background-color: rgb(169, 165, 165);
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem; 
+}
+.text-red{
+  border-inline-start: 3px solid blue;
+  font-style: italic;
+  padding-inline-start: 10px;
+  font-size: 1.2rem;
+}
+table{
+  border: 3px solid rgb(165, 168, 168);
+  background-color: rgb(169, 165, 165);
+
+}
+a{
+  color: #fb5975;
+}
+h2{
+  font-size: 2.7em;
+}
+h3{
+  font-size: 2.4rem;
+}
+.text-red-2{
+  font-style: italic;
+  font-size: 18px;
+  margin-block: 0.5rem;
+  margin-block-end: 1rem;
+}
+body{
+  font-size: 1rem;
+}
+
+.aligncenter{
+  display: flex;
+}
