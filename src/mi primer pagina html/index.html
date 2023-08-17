@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>¿Cómo crear mi primera página web HTML</title>
+</head>
+
+<body>
+    <p>por jaime cervantes velazcos</p>
+    <time>9 de agosto 2023</time>
+    <p>comentarios</p>
+    <div>
+        <width class=20px>
+            <img src="https://i0.wp.com/www.pensemosweb.com/wp-content/uploads/2018/01/HTMLCover.jpg?fit=1240%2C700&ssl=1">
+
+            <h1>primero HTML, luego CSS y JAVASCRIP</h1>
+
+            <P>para crear una pagina web nesesitas comprender tres sensillas tecnologias muy faciles de aprender: <strong>
+						HTML,CSS Y JAVASCRIP. </strong></P>
+
+            <P>Juntas permiten crear aplicaciones sosftficadas. ejemplos de ellas son instagram, twitter y facebook, a continuacion veamos que son estas tecnologias</P>
+            <h1>HTML</h1>
+
+            <P><strong> HTML </strong>permite crear el contenido de nuestra pagina o aplicacion de manera orgnizada, sin html no podrias ver tus fotos en facebook o reproducir videos en yuotube</P>
+
+            <h1>CSS</h1>
+
+            <p><strong> CSS </strong> se encarga de la apariencia visual del contenoido gernerado por HTML, con CSS podemos establecer diseños colores y tamaños de letra dimensiones de cada elemento posiciones y alineados, bordes y sombras y demas caracteristicas
+                de diseño, sin CSS SERIA MUY DIFICIL de enternder tu muro de facebook todo estaria muy revuelto</p>
+
+            <h1>JAVASCRIP</h1>
+
+            <P><strong> JAVASCRIP </strong>te permite interactuar dinamicamente con la aplicacion, claro ejemplo del uso de JAVASCRIP son las notificaciones de facebook el chat de este mismo cuando damos me gusta creamos una publicacion o escribimos una
+                publicacion</P>
+
+            <p>desde mi punto de vistalo ideal es aprender html luego css y JAVASCRIP..</p>
+
+            <h1> PAGINA WEB UTILIZANDO HTML</h1>
+            <P>El siguiente ejemplo muestra como crear tu primera página web, si lo quieres probar en tu computadora, crea un archivo llamado <code>index.html,</code> después copia y pega el código de este ejemplo. Luego para ver tu página recién generada
+                solo realiza un doble clic sobre <code>index.html</code> desde tu explorador de archivos. </P>
+
+
+            <iframe style="width: 100%;" title="Mi primera página web" src="https://codepen.io/jaime_cervantes_ve/embed/GeKZGp/?height=265&amp;theme-id=0&amp;default-tab=html,result#full" height="265" frameborder="no" scrolling="no" allowfullscreen="allowfullscreen"><br> See the Pen <a
+						href=https://codepen.io/jaime_cervantes_ve/pen/GeKZGp>Mi primera página web</a> by Jaime Cervantes
+					Velasco<br>
+					(<a href=https://codepen.io/jaime_cervantes_ve>@jaime_cervantes_ve</a>) on <a
+						href=https://codepen.io>CodePen</a>.<br></iframe>
+
+
+            <cite>acontinuacio vampos a explicar cada una de las partes de nuesrto codigos</cite>
+
+
+            <h2 class="span" id="DOCTYPE">DOCTYPE</span>
+            </h2>
+            <p>lo primero que exite en nuestro codigo es <span id="DOCTYPE">DOCTYPE html,</span> esto indica al navegador las sintaxis y reglas que formaran a nuestra página web. Antiguamente, se utilizaba una definición de doctype mucho más extensa, algo
+                como lo siguiente.</p>
+
+            <style>
+                .block-code {
+                    padding: 1rem;
+                    font-family: monospace;
+                    background-color: black;
+                    color: white;
+                }
+                
+                .block-code code {
+                    display: block;
+                    overflow-wrap: break-word;
+                    white-space: pre-wrap;
+                }
+            </style>
+            <pre class="block-code">
+			<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"  "http://www.w3.org/TR/html4/strict.dtd"&gt;</code>
+		</pre>
+            <p>pero actual mente la version corta es mas suficiente solo no olvides agregarla poerq de otro modo tu contenido sera rendarizado como una version antigua de htmal..</p>
+
+            <h1>ETIQUETA HTML</h1>
+            <P>luego tenemos la etiqueta <strong> html </strong> indica el inicio de nuestra pagina web todas las demas etiquetas deben estar dentro de esta, el final de la etiqueta se marca casi el mismo codigo pero con un diagonal / <strong> /html </strong>                ademas la etiqueta <strong> html </strong> tiene solo dos etiquetas hijas
+                <strong>head</strong> y <strong>body</strong> las cuales explicaremos un poco mas abajo
+            </P>
+            <style>
+                .block-code {
+                    padding: 1rem;
+                    font-family: monospace;
+                    background-color: black;
+                    color: white;
+                }
+                
+                .block-code code {
+                    display: block;
+                    overflow-wrap: break-word;
+                    white-space: pre-wrap;
+                }
+            </style>
+            <pre class="block-code">
+					<code>&lt;html<span role="presentation" style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span>
+				</code>
+				</pre>
+
+
+            <h1>Etiquetas</h1>
+            <p>Pero ¿Qué es una etiqueta?, una etiqueta es la unidad principal con la que se crea el contenido de una página o aplicación web.
+            </p>
+            <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i0.wp.com/www.pensemosweb.com/wp-content/uploads/2018/02/tag.jpg?w=700&amp;ssl=1" width="279"
+                height="96">
+
+            <cite>partes de una etiqueta html</cite>
+
+
+            <p> Casi todas las etiquetas tienen su etiqueta de cierre la etiqueta DOCTYPE no tiene cierre. No te preocupes, son pocas las que no se cierran. Además, los nombres de etiquetas no son sensibles a mayúsculas y minúsculas,</p>
+
+
+            <h1>Atributo lang en la etiqueta html</h1>
+
+            <p>Algo que destacar en la etiqueta es que tiene este atributo <strong> lang </strong> quiere decir language y su valor significa spanish.
+            </p>
+
+
+            <p>El atributo <strong>lang</strong> ayuda al navegador web a seleccionar texto, revisar la ortografía, traducir tu página y convertir el texto en audio para personas con problemas visuales.</p>
+
+
+            <h1>ETIQUETA HEAD </h1>
+
+            <p>La etiqueta <strong>head</strong> puede contener lo que se le llama metadatos y demás información que no es visible para el usuario. Es el lugar donde se definen o importan estilos (archivos CSS), código Javascript, y demás datos para que
+                el navegador web pinte la página web.</p>
+
+
+            <p> én sirve para describir la página web a motores de búsqueda, por ejemplo usando metadatos sobre quien es el autor, el título y una descripción corta sobre la página web. El título que mencionamos es el de la página web, el que aparece en la
+                pestaña de tu navegador web.</p>
+
+            <p> Adicional, la etiqueta head sirve para agregar metas de terceros como el open graph data creado por facebook y twitter cards creado por twitter.
+        </width>/p>
+
+        <p> En nuestro ejemplo, dentro de la etiqueta <strong> head </strong>podemos ver dos etiquetas
+            <strong>meta</strong> descritos a continuación ( meta viene de meta information).
+        </p>
+
+
+
+        <h1>Codificación de caracteres utf-8h</h1>
+
+        <p>En el meta
+            <strong> charset="utf-8"</strong> usa un atributo charset con valor utf-8, esto indica la codificación de caracteres de la página y nos permite tener caracteres raros de otros idiomas que de otra manera no se visualizarían correctamente.
+        </p>
+
+
+
+        <p> Ejemplos concretos serian la ñ y vocales con acentos para el idioma español, caracteres en chinos o koreano. Actualmente, los navegadores web</p>
+
+        <p> firefox, chrome y brave corrigen este problema automáticamente cuando se carga la página web. Pero se recomienda usar este meta en caso de que se cargue la página web en un navegador antiguo o alguno navegador web que no corrija esta codificación
+            de caracteres automáticamente</p>
+
+        <p>ún teniendo este meta, es importante guardar el archivo en tu editor de código con codificación de caracteres UTF-8, probablemente no tengas que preocuparte de esto en los editores modernos como Sublime text, Atom y Visual Studio Code.
+        </P>
+
+        <h1> Meta Viewport</h1>
+        <p>El meta
+            <strong> name="viewport" content="width=device-width,initial-scale=1"</strong>> es muy útil cuando nuestra página es visualizada en dispositivos móviles,<strong> width=device-width</strong> permite tomar todo el ancho de nuestra pantalla móvil
+            como el ancho de la página, initial-scale=1 evita que ciertos dispositivos le apliquen algún tipo de escaldo inicial a nuestra página. Con este meta obtenemos un diseño congruente en los dispositivos móviles. De otra forma veríamos una página
+            con un escaldo muy pequeño debido a que el navegador trata de encajar el contenido como si lo estuviéramos viendo en una pantalla más grande de computadora.
+        </p>
+        <p><strong><cite>meta name="viewport" content="width=device-width,initial-scale=1"</cite></strong></p>
+        <p> Una nota importante es que las etiquetas
+            <strong> meta</strong> y
+            <strong>!DOCTYPE html</strong> no tienen su correspondiente cierre o final de etiqueta, esto es así porque estas etiquetas realmente no tienen contenido visible del elemento como pasa con la etiqueta<strong>html /html>, body /body</strong>            o el encabezado
+            <strong>h1 /h1 </strong>
+
+
+            <h1>Etiqueta body y etiquetas dentro de body </h1>
+
+            <p>La etiqueta <strong>body</strong> contiene toda la información visible que deseas mostrar al usuario. Todo el contenido que puedas ver en u na página web o aplicación está dentro de la etiqueta <strong> body </strong></p>
+
+
+            <h1>Etiquetas de encabezados</h1>
+
+            <p> Después tenemos a la etiqueta body, la cual contiene todo el demás contenido visible de nuestra página, dentro tenemos 6 etiquetas, h1 a h6 la h significa Heading (encabezado), se ocupan para mostrar títulos o encabezados, h1 es el de mayor
+                relevancia y h6 es el de menor </p>
+
+
+            <h1>etiqueta para crear párrafos </h1>
+            <style>
+                .block-code {
+                    padding: 1rem;
+                    font-family: monospace;
+                    background-color: black;
+                    color: white;
+                }
+                
+                .block-code code {
+                    display: block;
+                    overflow-wrap: break-word;
+                    white-space: pre-wrap;
+                }
+            </style>
+            <pre class="block-code">
+						<code>&lt; <p> <strong> p> El desarrollo web o programación web utiliza tres principales tecnologías; HTML, CSS y
+							Javascript. Juntas permiten crear aplicaciones sofisticadas,</strong> por ejemplo
+							facebook es el  más conocido, también mercadolibre e instagram <span> /p>"</span>>  <span class="cm-tag cm-bracket">&lt;</span></pre>
+
+
+            <h1>Etiqueta strong</h1>
+
+            <p> La etiqueta <strong> strong </strong> permite marcar palabras o frases que son importantes, normalmente son palabras que cuando hablamos les damos un énfasis fuerte, con un tono más alto y a menor velocidad porque queremos ser más claros en
+                la comunicación. Es por eso que los screen readers leen el contenido de esta etiqueta con un tono de voz dif
+            </p>
+            <style>
+                .block-code {
+                    padding: 1rem;
+                    font-family: monospace;
+                    background-color: black;
+                    color: white;
+                }
+                
+                .block-code code {
+                    display: block;
+                    overflow-wrap: break-word;
+                    white-space: pre-wrap;
+                }
+            </style>
+            <pre class="block-code">
+										<code>&lt; <p> <strong><p>
+											El desarrollo web o programación web utiliza tres principales tecnologías;<cite>strong </cite>HTML, CSS y Javascript
+											<cite> strong </cite>. Juntas permiten crear aplicaciones sofisticadas,
+											facebook es el ejemplo más conocido, también mercadolibre e instagram.
+										</pre>
+        </p>
+
+
+        <p> Los navegadores web marcan el contenido en negritas, pero esta etiqueta no debe usarse con el objetivo visual de remarcar un texto en negritas. Para poner texto en negritas por razones solo de diseño puedes utilizar un
+            <span> en conjunto con alguna regla de estilos (CSS).
+			</p>
+
+			<h1> Conclusión </h1>
+
+			<p> Como vemos, no es difícil crear contenido para nuestra página, lo único que necesitamos saber son los nombres
+				de las etiquetas y para qué nos sirven, aquí puedes encontrarlas. No tienes que memorizarlas, pero si comprender
+				como se usan, así cada vez que necesites de alguna siempre puedes consultar en el anterior enlace.
+
+				En futuras publicaciones profundizaremos como funciona nuestro contenido HTML con CSS (Cascade Style Sheet,
+				Hojas de Estilo en Cascada), para terminar incluyendo también Javascript en una tercera publicacion. </p>
+
+			<div>
+				<h1>Comparte esto:
+			</div>
+			</h1>
+			</h1><img scr>
