@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The CSS Cascade</title>
+    <style>
+      .bloque {
+        border-inline-start: 4px solid blue;
+        background-color: rgba(240, 184, 240, 0.425);
+        font-style: italic;
+        padding-inline-start: 10px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+      }
+      [type] {
+        font-size: larger;
+      }
+      .P {
+        color: rgb(53, 28, 153);
+        display: inline-block;
+        padding: 0.5 rem;
+        background: rgba(239, 15, 15, 0.1);
+      
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <h1>The Cascade CSS</h1>
+        <h2>¿Qué significa cascade?</h2>
+        <p>
+          CSS Cascade es una de las partes más poderosas de CSS. Todo aquel que
+          halla trabajaado con CSS a lo largo del desarrollo de una pagina web
+          se ha podido dar cuenta que a veces resulta un poco fustrante puesto
+          que no entendemos el porque no se aplica dicha propiedad CSS
+        </p>
+        <p class="bloque">
+          La Cascada CSS es la forma en que nuestros navegadores resuelven las
+          declaraciones CSS que compiten entre sí.
+        </p>
+        <p>
+          Cada vez que se escriba una declaración (o regla) de CSS, entrará en
+          la Cascada de CSS, lo que determinará si terminará o no como el estilo
+          final. Cuanto más abajo en la cascada cae una declaración, menos
+          probable es que termine como el estilo final.
+        </p>
+        <h2>Diferentes niveles de Cascade</h2>
+        <h3>Importancia</h3>
+        <p>
+          El primer nivel de Cascade analiza el tipo de regla que estamos
+          analizando.
+        </p>
+        <p>Existen 4 tipos basicos de reglas</p>
+        <ol type="1">
+          <li>
+            Importance
+            <ol>
+              <li>
+                transition <br />Las reglas que se aplican a una transición
+                activa toman la mayor importancia
+              </li>
+
+              <li>
+                !importante <br />Cuando agregamos !importantal final de nuestra
+                declaración, salta a este nivel de la Cascada. Idealmente,
+                reserve este nivel para Hail Marys, que son necesarios para
+                anular estilos de bibliotecas de terceros.
+              </li>
+              <li>
+                animation <br />que se aplican a una animación activa saltan un
+                nivel en la Cascada.
+              </li>
+              <li>
+                normal <br />Este nivel es donde vive la mayor parte de las
+                reglas
+              </li>
+            </ol>
+            <p>
+              Este nivel superior se reserva principalmente para garantizar que
+              nuestros elementos se animen correctamente y para ayudar a los
+              desarrolladores desesperados <code class="P">( !important).</code>
+            </p>
+            <strong>Ejemplo</strong>
+            <p>
+              De las siguientes reglas el ejemplo 2 gana esto se debe
+              <code class="P">!important</code> las declaraciones caen en el
+              segundo nivel, mientras que las declaraciones normales caen en el
+              cuarto nivel.
+            </p>
+            <img src="img/code.png" width="350" />
+            <img src="img/code2.png" width="400" />
+          </li>
+          <li>Origin</li>
+          <p>
+            El segundo nivel de Cascade analiza dónde se definió la regla.
+            <br />
+            Hay tres lugares donde se puede definir una regla:
+          </p>
+          <ol>
+            <li>
+              website <br />Este es el único nivel sobre el que tienes control,
+              como desarrollador web.
+            </li>
+            <li>user</li>
+            <li>
+              Navegador <br />Cada navegador tiene su propio conjunto de
+              estilos, por lo que cosas como &lt;button&gt; tienen estilos
+              predeterminados.
+            </li>
+            <button>Este es un boton predeterminado de su navegador</button>
+            <p class="bloque">
+              ¡Alerta de hecho funky! La jerarquía aquí en realidad se invierte
+              para !importantlas reglas, lo que significa que una regla
+              !important predeterminada del navegador gana sobre una regla
+              !important del sitio web (mientras que una regla del sitio web
+              normalmente gana sobre el valor predeterminado del navegador ).
+            </p>
+            <strong>EJEMPLO</strong>
+            <p>
+              De las siguientes ejemplos gana el primero puesto que
+              declaraciones específicas del sitio web se encuentran en el primer
+              nivel, mientras que los valores predeterminados del navegador se
+              encuentran en el tercer nivel.
+            </p>
+            <img src="img/code3.png" width="350" />
+            <img src="img/code3'3.png" width="350" />
+          </ol>
+          <li>
+            Specificity
+            <p>
+              El tercer nivel de la Cascada analiza la Especificidad de una
+              regla. <br />Hay cinco niveles de selectores:
+            </p>
+            <ol>
+              <li>
+                Estilos en línea <br />
+                Declarados dentro de una stylepropiedad HTML son los más
+                específicos
+              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </li>
+          <li></li>
+        </ol>
+      </article>
+    </section>
+  </body>
+</html>
