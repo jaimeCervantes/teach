@@ -21,7 +21,11 @@
         display: inline-block;
         padding: 0.5 rem;
         background: rgba(239, 15, 15, 0.1);
-      
+      }
+      .nivel{
+        font-size: larger;
+        color: black;
+        font-weight: bolder;
       }
     </style>
   </head>
@@ -47,15 +51,15 @@
           probable es que termine como el estilo final.
         </p>
         <h2>Diferentes niveles de Cascade</h2>
-        <h3>Importancia</h3>
-        <p>
-          El primer nivel de Cascade analiza el tipo de regla que estamos
-          analizando.
-        </p>
-        <p>Existen 4 tipos basicos de reglas</p>
+
         <ol type="1">
           <li>
-            Importance
+            <code class="nivel">Importance</code>
+            <p>
+              El primer nivel de Cascade analiza el tipo de regla que estamos
+              analizando.
+            </p>
+            <p>Existen 4 tipos basicos de reglas</p>
             <ol>
               <li>
                 transition <br />Las reglas que se aplican a una transición
@@ -92,7 +96,7 @@
             <img src="img/code.png" width="350" />
             <img src="img/code2.png" width="400" />
           </li>
-          <li>Origin</li>
+          <li><code class="nivel">Origin</code></li>
           <p>
             El segundo nivel de Cascade analiza dónde se definió la regla.
             <br />
@@ -128,7 +132,7 @@
             <img src="img/code3'3.png" width="350" />
           </ol>
           <li>
-            Specificity
+            <code class="nivel">Specify</code>
             <p>
               El tercer nivel de la Cascada analiza la Especificidad de una
               regla. <br />Hay cinco niveles de selectores:
@@ -139,13 +143,61 @@
                 Declarados dentro de una stylepropiedad HTML son los más
                 específicos
               </li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                capa <br />Se podra definir "capas" explícitas de estilos, para
+                el manejo intencional de la especificidad. Las capas "ganan" al
+                ser definidas más tarde. <br />
+                <strong>EJEMPLO</strong>
+                <p>
+                  El texto será verde, ya que layer two se define después de la
+                  capa uno
+                </p>
+                <img src="img/code4.png" width="350" />
+              </li>
+              <li>
+                id <br />Podemos apuntar elementos basados ​​en su id, usando la
+                sintaxis #id
+              </li>
+              <img src="img/code5.png" width="380" />
+              <img src="img/code5´5.png" width="400" />
+              <img src="img/EJEMPLO.png" width="300" />
+              <li>
+                clase | atributo | pseudo-clase
+                <p>
+                  Podemos orientar elementos en función de su class, usando la
+                  sintaxis <code class="P">.class</code>
+                </p>
+                <img src="img/code6.png" width="300" />
+                <p>
+                  Este nivel también incluye selectores de atributos que apuntan
+                  a atributos HTML, como <code class="P">[checked]</code>y
+                  [href="https://wattenberger.com"]
+                </p>
+                <p>
+                  Este nivel también incluye pseudo-selectores , como
+                  :hovery:first-of-type
+                </p>
+              </li>
+              <li>
+                tipo | pseudo-elemento
+                <p>
+                  Podemos orientar elementos en función de su tipo de etiqueta ,
+                  usando la sintaxis type Este nivel también incluye
+                  pseudo-elementos , como :beforey:selection
+                </p>
+              </li>
             </ol>
           </li>
-          <li></li>
+          <li>
+            <code class="nivel">Posición</code> <br />Cuarto nivel: analiza el
+            orden en que se definieron las reglas
+            <p>
+              Las reglas que se definen más adelante en hojas de estilo o
+              &lt;style&gt; etiquetas vinculadas ganarán, dado que todo lo demás
+              en la Cascada es igual.
+              <img src="img/7.png" width="300" />
+            </p>
+          </li>
         </ol>
       </article>
     </section>
