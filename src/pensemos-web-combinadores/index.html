@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinadores</title>
+    <style>
+      header {
+        display: inline-block;
+      }
+
+      p {
+        color: rgb(72, 0, 255);
+      }
+      article section p {
+        margin-inline-start: 1rem;
+        font-size: 25;
+        color: rgb(226, 43, 198);
+      }
+      .box p {
+        color: rgb(160, 80, 29);
+      }
+      p > strong {
+        border: 2px solid green;
+      }
+
+      ul > li {
+        border-top: 5px solid red;
+      }
+      h2 + p {
+        background-color: aquamarine;
+        color: blue;
+        padding: 1rem;
+      }
+      h3 ~ p {
+        font-weight: bold;
+        background-color: #c95fa0;
+        color: #29088e;
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <header><img src="img/CSS3_logo.svg.png" width="45" /></header>
+        <section>
+          <h2>Combinadores</h2>
+          <p>
+            Se llaman así porqué combinan otros selectores de manera que
+            proporciona una relación útil entre ellos y la ubicación del
+            contenido en el documento.
+          </p>
+        </section>
+      </article>
+
+      <section>
+        <img src="img/code01.png" width="350" />
+        <p>
+          Estos selectores seleccionan elementos que son descendientes de otros
+          selectores. No es necesario que sean hijos directos.
+        </p>
+      </section>
+      <section>
+        <p>
+          En el ejemplo siguiente seleccionamos solo el elemento &lt;p&gt; que
+          hay dentro de un elemento con una clase .box.
+        </p>
+        <img src="img/code.png" width="400" height="250" />
+        <img src="img/code6.png" width="400" height="250" />
+        <div class="box"><p>Text in .box</p></div>
+        <p>Text not in .box</p>
+      </section>
+      <div>
+        <h2>selector de combinacion elemento hijo</h2>
+        <p>
+          El selector de combinación de elementos hijo es un símbolo de «mayor
+          que» (>), que selecciona solo cuando los selectores identifican
+          elementos que son hijos directos. Los elementos descendientes que se
+          encuentran más abajo en la jerarquía no se seleccionan. Por ejemplo,
+          para seleccionar solo los elementos &lt;p&gt; que son hijos directos
+          de elementos &lt; article&gt;:
+        </p>
+        <strong>ejemplo</strong>
+        <ul>
+          <li>1er eejemplo</li>
+          <li>2do ejemplo</li>
+          <li>3er ejemplo</li>
+        </ul>
+        <img src="img/code2.png" width="350" />
+        <img src="img/code4.png" width="350" />
+        <img src="img/code5.png" width="400" height="250" />
+      </div>
+
+      <section>
+        <div>
+          <h2>Hermanos adyacentes</h2>
+          <p>
+            El selector de elementos hermanos adyacentes (+) se utiliza para
+            seleccionar un elemento que se encuentra justo al lado de otro
+            elemento (es decir a el hermano siguente inmediato) en el mismo
+            nivel de la jerarquía.
+          </p>
+          <img src="img/code7.png" width="400" height="250" />
+        </div>
+      </section>
+      <section>
+        <h2>Hermanos Generales</h2>
+        <p>
+          Se puede utilizar incluso si no son directamente adyacentes, estos
+          selecciona hermanos que van adelante del punto de partida, de 1 o mas
+          elementos.
+        </p>
+        <article>
+          <h3>Ejemplo</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nihil
+            perferendis saepe, voluptatum animi sit voluptas est eius officia
+            non esse eveniet similique corrupti commodi nostrum delectus
+            accusamus enim ut!
+          </p>
+          <strong>Practicando HTML y CSS</strong>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ea!
+            Quis reiciendis corporis facilis beatae eius asperiores similique
+            fugiat aut ea dicta quo vero enim eligendi accusantium, laudantium
+            dolore illo!
+          </p>
+          <img src="img/code8.png" width="350" />
+          <img src="img/code10.png" width="350" />
+        </article>
+      </section>
+      <section>
+        <article>
+          <h2>El uso de selectores de combinación</h2>
+          <p>
+            se puedes combinar cualquiera de los selectores de los artículos
+            anteriores con selectores de combinación para seleccionar una parte
+            del documento.
+          </p>
+          <strong>Ejemplo</strong>
+          <p>
+            El codigo acontinuacion se utiliza para seleccionar elementos de una
+            lista con una clase «a» que son hijos directos de &lt;ul&gt; :
+          </p>
+
+          <img src="img/code11.png" width="350" />
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
