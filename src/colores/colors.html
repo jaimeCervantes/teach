@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los colores en CSS</title>
+    <style>
+      h1 {
+        color: black;
+        font-size: large;
+        text-align: center;
+        border: 2px solid blue;
+        background-color: yellow;
+        padding: 0.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+        background-color: rgb(0, 255, 102);
+        text-align: center;
+      }
+      p {
+        color: blue;
+      }
+      .P {
+        color: rgb(153, 36, 28);
+        display: inline-block;
+        padding: 0.5 rem;
+        background: rgba(167, 30, 119, 0.1);
+      }
+
+      .a {
+        color: green;
+        background: yellow;
+        border-radius: 2px;
+      }
+      .r {
+        color: red;
+        background: aqua;
+        border-radius: 2px;
+      }
+      .text-red {
+        color: rgb(152, 16, 16);
+      }
+      .valores {
+        color: rgb(15, 95, 35);
+      }
+      .hexa {
+        color: #109dfa;
+      }
+      .example {
+        color: #fa4e10;
+      }
+      .element {
+        background-color: hsl(196, 73%, 62%);
+        color: hsl(1, 64%, 47%);
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <h1>Los colores en Css</h1>
+          <p>
+            Los códigos de colores HTML son el medio para representar el formato
+            de colores que un ordenador puede leer y mostrar.
+          </p>
+          <img src="img/curso-de-html-y-css-azul-school.png" width="350" />
+          <img src="img/web-safe-color-chart.png" width="450" />
+          <img src="img/logo.png" width="200" />
+          <h2>Colores con Nombres</h2>
+          <p>
+            Los nombres de colores HTML pueden utilizarse con estilos HTML en
+            línea o en una hoja de estilo CSS. <br />
+            Los navegadores modernos soportan 140 colores con nombre <br />
+            <code class="a">Verde,</code>
+            <code class="r">Rojo</code>
+          </p>
+          <p>
+            Al igual que los códigos de color Hex , nombres de colores HTML
+            pueden utilizarse con estilos HTML en línea o en una hoja de estilo
+            CSS.
+          </p>
+
+          <img src="img/code.png" width="400" />
+          <img src="img/cod2.png" width="280" />
+          <img src="img/intro_3.gif" width="400" height="440" />
+          <h2>Colores con RGB</h2>
+          <p>
+            En CSS, un color se puede especificar como un valor RGB, utilizando
+            esta fórmula: rgb ( rojo, verde , azul ) <br />
+            Cada parámetro (rojo, verde y azul) define la intensidad del color
+            entre 0 y 255. <br />Por ejemplo, rgb(255, 0, 0) se muestra como
+            rojo, porque el rojo se establece en su valor más alto (255) y los
+            demás se establecen en 0. <br />
+            Para mostrar negro, configure todos los parámetros de color en 0,
+            así: rgb (0, 0, 0). Para mostrar el blanco, configure todos los
+            parámetros de color en 255, así: rgb (255, 255, 255).
+          </p>
+
+          <h2 style="background-color: rgb(255, 0, 0)">rgb(255, 0, 0)</h2>
+          <h2 style="background-color: rgb(0, 0, 255)">rgb(0, 0, 255)</h2>
+          <h2 style="background-color: rgb(60, 179, 113)">rgb(60, 179, 113)</h2>
+          <h2 style="background-color: rgb(238, 130, 238)">
+            rgb(238, 130, 238)
+          </h2>
+
+          <h2 style="background-color: rgb(255, 165, 0)">rgb(255, 165, 0)</h2>
+          <h2 style="background-color: rgb(106, 90, 205)">rgb(106, 90, 205)</h2>
+
+          <p class="text-red">
+            Este es un ejemplo con RGB
+            <code class="valores">utilizando RGB</code>
+          </p>
+          <img src="img/code3.png" width="300" />
+          <img src="img/code4.png" width="300" />
+          <h2>Colores con hexadecimal</h2>
+          <p class="hexa">
+            Los códigos de color Hex (o hexadecimales) se componen de un signo #
+            y tres pares de caracteres que representan la intensidad de los tres
+            colores primarios (rojo, verde y azul en ese orden). Los valores
+            pueden ir desde 00 (que es la menor intensidad para cada color
+            primario) hasta FF (que es la intensidad más alta).
+          </p>
+          <p>
+            Cada código de color Hex consiste en seis caracteres en total. Estos
+            pueden ser cualquier combinación de los diez números del 0 al 9 y de
+            seis letras que van de la a a la f. Esto significa que existen
+            16.777.216 de combinaciones posibles en total. Veamos algunas de
+            ellas.
+          </p>
+          <p class="example">
+            Para crear el color blanco deberás mezclar cada uno de los colores
+            primarios a su máxima intensidad. Esto significa que el código de
+            color Hex para el blanco es #FFFFFF. Debido a que el negro es la
+            ausencia de color, su código Hex es #000000. Para crear el color
+            azul deberás definir la mayor intensidad en el azul y la menor en
+            los otros dos colores primarios. Por el contrario, el código de
+            color hex del rojo es #FF0000.
+          </p>
+          <img src="img/RGB_ColorHex.jpg" width="420" />
+          <img src="img/code5.png" width="300" />
+          <h2>Colores con HSL</h2>
+          <p>
+            Los colores HSL son muy poderosos cuando los usamos de la manera
+            correcta. Pueden ahorrarnos tiempo y esfuerzo e incluso ayudarnos a
+            explorar opciones sobre cómo aplicar color al diseño.
+          </p>
+          <strong>¿Que es hsl?</strong>
+          <p>
+            HSL significa tono, saturación y luminosidad. Se basa en la rueda de
+            colores RGB. Cada color tiene un ángulo y un valor porcentual para
+            los valores de saturación y luminosidad.
+          </p>
+          <img
+            src="img/hsl-paleta-color-combinacion-triadico.webp"
+            width="500"
+          /><img src="img/1_-EvxGXO7I3ZwAMIfrFRjtQ.jpg" width="500" />
+          <p>
+            HSL puede ser útil cuando tenemos un diseño que usa el mismo color
+            pero con diferentes tonalidades.
+          </p>
+          <p class="element">Este es un ejemplo utilizando HSL</p>
+          <img src="img/code6.png" width="500" />
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
