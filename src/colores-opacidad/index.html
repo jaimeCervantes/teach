@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtro-alpha-opacidad</title>
+    <style>
+      h1 {
+        color: black;
+        font-size: x-large;
+        text-align: center;
+        border: 2px solid blue;
+        background-color: yellow;
+        padding: 0.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        background-color: rgb(0, 255, 102);
+        text-align: center;
+      }
+      h3 {
+        color: black;
+        background-color: aqua;
+        text-align: center;
+      }
+      h4 {
+        color: black;
+        font-size: x-large;
+        text-align: center;
+      }
+      p {
+        color: rgb(70, 58, 236);
+        padding: 0.5 rem;
+      }
+      .opacity {
+        opacity: 0.6;
+      }
+      div {
+        color: rgba(234, 240, 246, 0.8); /*Para modificar el opacity del texto*/
+        font-size: 48pt;
+        background: #33475b;
+        border: 10px solid rgba(2, 1, 0, 0.3); /*Para modificar el opacity del borde*/
+      }
+
+      .p {
+        color: rgb(225, 40, 235);
+        display: inline-block;
+        padding: 0.5 rem;
+        background: rgba(94, 167, 30, 0.1);
+      }
+      .text-green {
+        color: green;
+        font-size: xx-large;
+      }
+      .text-red {
+        color: red;
+        font-size: xx-large;
+      }
+      .text-blue {
+        color: blue;
+        font-size: 30px;
+      }
+      .text-rgba {
+        color: rgba(5, 3, 9, 0.3);
+        border: 5px solid rgba(108, 31, 9, 0.3);
+      }
+      .text-hsla {
+        color: hsla(100, 20%, 30%, 50%);
+        border: 5px solid hsla(7, 56%, 44%, 0.5);
+      }
+      .text-hexa {
+        color: #134d87aa;
+        border: 5px solid #db37ddaa;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Filtro alpha y opacidad</h1>
+        <h2>Los colores en Css</h2>
+        <p>
+          Los códigos de colores HTML son el medio para representar el formato
+          de colores que un ordenador puede leer y mostrar.
+        </p>
+        <img src="img/curso-de-html-y-css-azul-school.png" width="350" />
+        <p>
+          El filtro alpha permite controlar la opacidad de un elemento de la
+          página.
+        </p>
+
+        <h3>Colores con Nombres</h3>
+        <p>
+          Los nombres de colores HTML pueden utilizarse con estilos HTML en
+          línea o en una hoja de estilo CSS. <br />
+          Los navegadores modernos soportan 140 colores con nombre <br />
+        </p>
+        <p class="text-green">Texto en color verde</p>
+        <p class="text-red">texto en color rojo</p>
+        <p class="text-blue">texto en color azul</p>
+
+        <img src="img/text-color.png" width="330" />
+        <img src="img/nombres-colores.png" width="400" />
+
+        <h3>Colores con la funcion RGBA</h3>
+        <p>
+          Donde a representa el valor alpha ( como en transparencia alpha ). De
+          hecho el parámetro alpha representa la opacidad y es un número decimal
+          de 0.0 ( completamente transparente ) a 1.0 ( totalmente opaco ).
+        </p>
+        <p class="text-rgba">Ejemplo de texto en color utilizando RGBA</p>
+        <img src="img/rgba.png" width="300" />
+
+        <h3>Colores con los valores hexadecimales</h3>
+        <p>
+          El uso de un valor alfa para actualizar la transparencia de un color
+          cambiará el formato del código hexadecimal de #RRGGBBa #RRGGBBAA(donde
+          alfa es A). Los primeros seis valores (los rojos, verdes y azules)
+          siguen siendo los mismos.
+        </p>
+        <p>
+          El AAvalor en #RRGGBBAApuede variar desde el valor más bajo posible (
+          00) hasta el valor más alto posible ( FF). Reducir el valor hará que
+          la visibilidad se vuelva cada vez más tenue hasta que se vuelva
+          transparente. Aumentar el valor hará que la visibilidad se vuelva cada
+          vez más opaca.
+        </p>
+        <p class="text-hexa">Texto ulilizando colores con hexa</p>
+        <img src="img/hexa.png" width="300" />
+        <h3>Colores con la funcion HSLA</h3>
+        <p>
+          La función hsla() define colores utilizando el modelo
+          Tono-saturación-luminosidad-alfa (HSLA).
+        </p>
+        <p>
+          Los valores de color HSLA son una extensión de los valores de color
+          HSL con un canal alfa, que especifica la opacidad del color.
+        </p>
+        <p>
+          <code class="p">h = hue</code> Define un grado en el círculo de color
+          (de 0 a 360): 0 (o 360) es rojo, 120 es verde, 240 es azul <br />
+
+          <code class="p"> s = saturation</code> Define la saturación; 0% es un
+          tono de gris y 100% es todo color (saturación total) <br />
+
+          <code class="p">l = luminisidad</code> Define la ligereza; 0% es
+          negro, 50% es normal y 100% es blanco <br />
+
+          <code class="p">a = alpha</code> Define la opacidad como un número
+          entre 0,0 (completamente transparente) y 1,0 (completamente opaco)
+        </p>
+        <p class="text-hsla">Ejemplo de texto utilizando HSLA</p>
+        <img src="img/hsla.png" with="200" height="200" />
+        <h2>Opacidad</h2>
+        <strong>¿Que es opacidad?</strong>
+        <p>
+          La propiedad CSS <code class="p">opacity</code> define la
+          transparencia de un elemento, esto es, en qué grado se superpone el
+          fondo al elemento. El elemento opacity modificará la opacidad de
+          fondos, textos, márgenes o cualquier otro elemento dentro de un bloque
+          div.
+        </p>
+        <p>Este es un ejemplo</p>
+        <br />
+        <img src="img/paisaje.jpg" width="300" />
+        <img src="img/paisaje.jpg" width="300" class="opacity" />
+        <img src="img/opacidad.png" width="300" />
+        <h3>Opacidad en textos y bordes</h3>
+        <p>
+          Para únicamente modificar la opacidad de un texto necesitarás
+          utilizar, por el contrario, la propiedad de color CSS y los códigos de
+          color RGBA. En el cuadro de abajo te presentamos un párrafo que ha
+          sido editado para ser más transparente respecto a un fondo negro.
+        </p>
+        <p>
+          Modificar el borde de un elemento solo deberás usar nuevamente la
+          propiedad abreviada de fondo de CSS y valores de color en RGBA.
+        </p>
+        <div>
+          <p>Este es un ejemplo de texto con opacity</p>
+        </div>
+        <img src="img/opacidad2.png" width="800" height="400" />
+      </section>
+    </article>
+  </body>
+</html>
