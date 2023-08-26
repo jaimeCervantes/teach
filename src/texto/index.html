@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <style>
+      h1 {
+        color: black;
+        font-size: 2rem;
+        text-align: center;
+        border: 2px solid blue;
+        background-color: yellow;
+        padding: 0.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+        background-color: rgb(0, 255, 102);
+        text-align: center;
+      }
+      h3 {
+        font-size: 2 rem;
+        background-color: orange;
+        text-align: center;
+        font-size: large;
+      }
+      p {
+        color: blue;
+      }
+      .p {
+        color: rgb(225, 40, 235);
+        display: inline-block;
+        padding: 0.5 rem;
+        background: rgba(94, 167, 30, 0.1);
+      }
+      strong {
+        color: black;
+        font-size: x-large;
+      }
+      .fuentes {
+        font-family: serif;
+        color: magenta;
+      }
+      .times {
+        color: rgb(31, 161, 42);
+        font-family: Times, serif;
+      }
+      .courier {
+        color: rgb(39, 10, 66);
+        font-family: "Courier New", monospace;
+      }
+      .pila {
+        color: blue;
+        font-family: "Lucida Console", Courier, monospace;
+      }
+      .normal {
+        color: crimson;
+        font-weight: normal;
+      }
+      .bold {
+        color: blue;
+        font-weight: bold;
+      }
+      .lighter {
+        color: red;
+        font-weight: lighter;
+      }
+      .bolder {
+        color: blue;
+        font-weight: bolder;
+      }
+      .cien {
+        color: red;
+        font-weight: 100;
+      }
+      .nueve {
+        color: blue;
+        font-weight: 900;
+      }
+      .styleNormal {
+        color: blue;
+        font-style: normal;
+      }
+      .italic {
+        color: red;
+        font-style: italic;
+      }
+      .oblique {
+        color: blue;
+        font-style: oblique;
+      }
+      .inherit {
+        font-style: inherit;
+      }
+      .initial {
+        color: violet;
+        font-style: initial;
+      }
+      .under {
+        text-decoration: underline red;
+      }
+
+      .over {
+        text-decoration: wavy overline lime;
+      }
+
+      .line {
+        text-decoration: line-through;
+      }
+
+      .plain {
+        text-decoration: none;
+      }
+
+      .underover {
+        text-decoration: dashed underline overline;
+      }
+
+      .thick {
+        text-decoration: solid underline purple 4px;
+      }
+
+      .blink {
+        text-decoration: blink;
+      }
+      .text-verde {
+        text-decoration-color: rgb(36, 202, 61);
+        text-decoration-line: underline;
+      }
+      .thickness {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: yellow;
+        text-decoration-thickness: 5px;
+      }
+      .capitalize {
+        text-transform: capitalize;
+      }
+      .uppercase {
+        text-transform: uppercase;
+        color: chocolate;
+      }
+      .lowercase {
+        text-transform: lowercase;
+      }
+      .xx-small {
+        color: #d72e67;
+        font-size: xx-small;
+        padding-inline-start: 10px;
+      }
+      .x-small {
+        color: #148cdb;
+        font-size: x-small;
+        padding-inline-start: 10px;
+      }
+      .small {
+        color: #378767;
+        font-size: small;
+        padding-inline-start: 10px;
+      }
+      .medium {
+        color: #db19d7;
+        font-size: medium;
+        padding-inline-start: 10px;
+      }
+      .large {
+        color: #11ad3b;
+        font-size: large;
+        padding-inline-start: 10px;
+      }
+      .x-large {
+        color: #109dfa;
+        font-size: x-large;
+        padding-inline-start: 10px;
+      }
+      .xx-large {
+        color: #fa3310;
+        font-size: xx-large;
+        padding-inline-start: 10px;
+      }
+      .px {
+        color: #d72e67;
+        font-size: 30px;
+      }
+      em {
+        color: #11ad3b;
+        font-size: 2em;
+      }
+      .length {
+        color: #378767;
+        letter-spacing: 0.4em;
+      }
+      .length2 {
+        color: #378767;
+        letter-spacing: 3px;
+      }
+      .length3 {
+        color: #148cdb;
+        letter-spacing: 0.3px;
+      }
+      .global {
+        color: #d72e67;
+        letter-spacing: inherit;
+      }
+      .global2 {
+        color: #148cdb;
+        letter-spacing: initial;
+      }
+      .height-normal {
+        color: #fa3310;
+        line-height: normal;
+        border: 5px solid rgb(63, 149, 202);
+      }
+      .height-number {
+        color: #db19d7;
+        line-height: 3.5;
+        border: 0.5rem solid #11ad3b;
+      }
+      .height-length {
+        color: #148cdb;
+        line-height: 3em;
+        border: 5px solid magenta;
+      }
+      .height-percentage {
+        color: #db19d7;
+        line-height: 115%;
+        border: 5px solid blue;
+      }
+      .text-start {
+        color: #d72e67;
+        border: 5px solid aqua;
+        text-align: start;
+      }
+      .text-end {
+        color: #11ad3b;
+        border: 5px solid yellow;
+        text-align: end;
+      }
+      .text-left {
+        color: tomato;
+        border: 5px solid grey;
+        text-align: left;
+      }
+      .text-rigth {
+        color: #000000;
+        border: 5px solid red;
+        text-align: right;
+      }
+      .text-center {
+        color: #db19d7;
+        border: 5px solid blueviolet;
+        text-align: center;
+      }
+      .text-justify {
+        color: #109dfa;
+        border: 5px solid magenta;
+        text-align: justify;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Texto</h1>
+
+        <p>
+          Texto CSS es el módulo de CSS que define cómo realizar la manipulación
+          de elementos de texto como los saltos de línea, la justificación, la
+          alineación, la gestión de espacios en blanco y las transformaciones de
+          texto.
+        </p>
+        <h2>1.-font/family</h2>
+        <p>
+          En CSS, la propiedad
+          <code class="p">font-family</code> define un tipo de letra específico
+          para un elemento y el aspecto que tendrá su contenido de texto.
+          <br />La sintaxis de la propiedad
+          <code class="p">font-family</code>es:
+        </p>
+        <img src="img/element.png" width="200" />
+        <p>
+          Escribimos la propiedad
+          <code class="p">font-family</code> seguida de dos puntos
+          <code class="p">:</code>, un espacio, un value, y finalmente
+          terminamos la especificación con un punto y coma
+          <code class="p">;</code>.
+        </p>
+        <strong>Nombre genérico de familia de fuentes</strong>
+        <p>
+          los nombres son palabras clave e incluyen una de las categorías de
+          fuentes mencionadas anteriormente (serif, sans-serif, monospace).
+          <br />Sería algo así:
+        </p>
+        <p class="fuentes">Hola Mundo</p>
+        <img src="img/fuent.png" width="300" />
+        <br />
+        <strong
+          >Como utilizar un nombre de familia de fuentes específico
+        </strong>
+        <p>
+          Esta regla establece Times como la fuente deseada y luego Serif como
+          la opción genérica de reserva, en caso de que la primera opción no
+          esté instalada en el ordenador del usuario.
+        </p>
+        <p class="times">Este es un ejemplo con Times</p>
+        <img src="img/times.png" width="300" />
+        <p class="courier">
+          Si el nombre contiene algún espacio en blanco, es necesario encerrarlo
+          entre comillas. Esto establece la fuente a Courier New y añade
+          monospace como respaldo. Si especificamos un tipo de letra que no sea
+          uno de los nombres genéricos (como serif, sans-serif) tenemos que dar
+          al navegador una alternativa.
+        </p>
+        <img src="img/courier.png" width="300" /> <br />
+        <strong>Como utilizar una pila de fuentes</strong>
+        <p>
+          En este caso, la propiedad
+          <code class="p">font-family</code> tiene múltiples valores. Es una
+          lista priorizada, separada por comas, de nombres de familias de
+          fuentes que puede aplicar al texto, indicando que todas las fuentes
+          son alternativas. Esto permite la máxima compatibilidad con los
+          navegadores y sistemas operativos. La lista se prioriza de izquierda a
+          derecha, de mayor a menor prioridad.
+        </p>
+        <img src="img/pila.png" width="400" />
+        <p class="pila">
+          Al aplicar más de un nombre de familia de fuentes, se crea un orden de
+          preferencia. Empezamos con la fuente que queremos primero. <br />
+          Si un usuario no tiene la primera opción instalada en su ordenador o
+          si no es compatible con el navegador, este pasa a la segunda fuente y
+          la utiliza. Si esa fuente tampoco está disponible, pasa a la tercera,
+          y así sucesivamente.<br />
+          Podemos listar tantas fuentes como queramos, pero la mejor práctica es
+          listar de tres a cuatro. <br />
+          Si todo lo demás falla, siempre habrá una fuente genérica listada al
+          final como última opción-mecanismo de devolución.
+        </p>
+        <h2>2.-font-weight</h2>
+        <p>
+          La propiedad CSS establece el peso (o negrita) de la fuente. Los pesos
+          disponibles dependen del que esté configurado actualmente.
+          <code class="p">font-weight</code>
+        </p>
+        <p class="normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+          consectetur exercitationem ratione quo quis ipsa nihil ex nulla
+          excepturi fugiat velit maxime cumque fuga impedit, iure quisquam odio
+          esse quos!
+        </p>
+        <img src="img/normal.png" width="300" />
+        <p class="bold">
+          Peso de la fuente en negrita. Igual que 700. <br />
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Exercitationem recusandae sequi laborum illo quod expedita autem illum
+          fugiat ea et nulla quisquam.
+        </p>
+        <img src="img/bold.png" width="300" />
+        <p class="lighter">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          incidunt quas mollitia deserunt, voluptates voluptas facere tempore ad
+          ullam, perferendis reiciendis totam velit labore laboriosam tenetur
+          quasi fugiat adipisci veniam.
+        </p>
+        <img src="img/lighter.png" width="300" />
+
+        <p class="bolder">
+          Un peso de fuente relativo más ligero que el elemento principal. Tenga
+          en cuenta que solo se consideran cuatro pesos de fuente para el
+          cálculo del peso relativo.
+        </p>
+        <img src="img/bolder.png" width="300" />
+
+        <p class="cien">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+          optio earum tempora ut cupiditate placeat, laborum, facilis adipisci
+          neque saepe repudiandae non veritatis impedit, voluptatibus doloremque
+          illo dolorem? Cupiditate, exercitationem.
+        </p>
+        <img src="img/cien.png" width="300" />
+
+        <p class="nueve">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nobis
+          ducimus deleniti totam pariatur aut harum, nostrum nesciunt illum ea
+          adipisci et quisquam cupiditate vitae libero dolorum veniam aspernatur
+          vel.
+        </p>
+        <img src="img/nueve.png" width="300" />
+        <h2>2.-font-style</h2>
+        <p>
+          La propiedad CSS establece si se debe diseñar una fuente con una cara
+          normal, cursiva u oblicua desde su archivo
+          <code class="p">.font-style</code>
+        </p>
+        <p>
+          Las fuentes en cursiva son generalmente de naturaleza cursiva, por lo
+          general usan menos espacio horizontal que sus contrapartes sin estilo,
+          mientras que las fuentes oblicuas generalmente son solo versiones
+          inclinadas de la cara normal. Cuando el estilo especificado no está
+          disponible, las caras en cursiva y oblicuas se simulan inclinando
+          artificialmente los glifos de la cara normal (se usa
+          font-synthesispara controlar este comportamiento).
+        </p>
+        <p class="styleNormal">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+          inventore repudiandae nam amet vitae sapiente, commodi distinctio
+          architecto illo harum facere, quibusdam reiciendis et doloremque.
+          Beatae quas aliquam similique vel.
+        </p>
+        <img src="img/normal2.png" width="300" />
+        <p class="italic">
+          Selecciona una fuente clasificada como italic. Si no se dispone de una
+          versión en cursiva del rostro, obliquese utiliza en su lugar una
+          clasificada como. Si ninguno está disponible, el estilo se simula
+          artificialmente.
+        </p>
+        <img src="img/italic.png" width="300" />
+        <p class="oblique">
+          Selecciona una fuente clasificada como oblique. italic Si no se
+          dispone de una versión oblicua de la cara, se utiliza en su lugar una
+          clasificada como . Si ninguno está disponible, el estilo se simula
+          artificialmente.
+        </p>
+        <img src="img/obliq.png" width="300" />
+        <p class="inherit">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae velit
+          commodi fugit ea nostrum? Error veniam quaerat, dolore doloremque sint
+          dolores magni laboriosam. Natus quibusdam recusandae vitae!
+          Laboriosam, dignissimos repudiandae?
+        </p>
+        <img src="img/inherit.png" width="300" />
+        <p class="initial">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+          suscipit illo provident aut aspernatur a incidunt in ex aliquam
+          doloribus accusantium quod, vel repudiandae, dolor dolores voluptatum
+          cum? Commodi, quisquam.
+        </p>
+        <img src="img/initial.png" width="300" />
+        <h2>3.-Text-decoration</h2>
+        <p>
+          La propiedad CSS abreviada establece la apariencia de las líneas
+          decorativas en el texto. Es una abreviatura de , , y la propiedad más
+          nueva.text-decoration
+          text-decoration-linetext-decoration-colortext-decoration-styletext-decoration-thickness
+        </p>
+        <p>
+          Las decoraciones de texto se dibujan en elementos de texto
+          descendientes. Esto significa que si un elemento especifica una
+          decoración de texto, entonces un elemento secundario no puede eliminar
+          la decoración.
+        </p>
+        <p>
+          La text-decorationpropiedad se especifica como uno o más valores
+          separados por espacios que representan las diversas propiedades de
+          decoración de texto a mano.
+        </p>
+        <p class="under">ejemplo utilizando text-decoration: underline red;</p>
+        <img src="img/under.png" width="300" />
+        <p class="over">
+          ejemplo utilizando text-decoration: wavy overline lime;
+        </p>
+        <img src="img/over.png" width="300" />
+        <p class="line">ejemplo utilizando text-decoration: line-through</p>
+        <img src="img/lime.png" width="300" />
+
+        <p class="plain">
+          El
+          <a class="plain" href="#"> enlace no estará subrayado</a>, ya que los
+          enlaces generalmente son por defecto. Tenga cuidado al quitar la
+          decoración del texto en anclajes ya que los usuarios a menudo dependen
+          del subrayado para indicar hipervínculos.
+        </p>
+        <img src="img/plain.png" width="300" />
+        <p class="underover">
+          ejemplo utilizando text-decoration: dashed underline overline;
+        </p>
+        <img src="img/underover.png" width="300" />
+        <p class="thick">
+          ejemplo utilizando text-decoration: solid underline purple 4px;
+        </p>
+        <img src="img/thick.png" width="300" />
+        <p class="blink">
+          Este texto puede parpadear, según el navegador que utilice.
+          <br />ejemplo utilizando text-decoration: blink;
+        </p>
+        <img src="img/blink.png" width="300" />
+
+        <h3>text-decoration-color</h3>
+        <p>
+          La propiedad CSS establece el color de las decoraciones agregadas al
+          texto por .text-decoration-color
+        </p>
+        <p>
+          El color se aplica a decoraciones, como subrayados, sobrerayados,
+          tachados y líneas onduladas como las que se utilizan para marcar
+          errores ortográficos, en el ámbito del valor de la propiedad.
+        </p>
+        <p class="text-verde">
+          CSS no proporciona un mecanismo directo para especificar un color
+          único para cada tipo de línea. No obstante, este efecto se puede
+          lograr anidando elementos, aplicando un tipo de línea diferente a cada
+          elemento (con la text-decoration-linepropiedad) y especificando el
+          color de la línea (con text-decoration-color) por elemento.
+        </p>
+        <img src="img/text-decoration-color.png" width="300" />
+
+        <h3>text-decoration-thickness</h3>
+        <p>
+          El
+          <code class="p">text-decoration-thickness</code> propiedad CSS
+          establece el grosor del trazo de la línea decorativa que se utiliza en
+          el texto de un elemento, como una línea continua, un subrayado o una
+          línea superpuesta.
+        </p>
+        <p class="thickness">
+          ejemplo de text-decoration-thickness Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Distinctio ullam consequuntur, nemo
+          explicabo cum velit perferendis id reiciendis nisi similique, magni
+          excepturi dolorum officiis corporis? Sapiente, ad quia? Illum, earum!
+        </p>
+        <img src="img/thi.png" width="300" />
+        <h2>5.-text-transform</h2>
+        <p>
+          La text-transform es propiedad CSS especifica cómo poner en mayúscula
+          el texto de un elemento. Se puede utilizar para hacer que el texto
+          aparezca completamente en mayúsculas o minúsculas, o con cada palabra
+          en mayúscula. También puede ayudar a mejorar la legibilidad de Ruby.
+        </p>
+        <p class="capitalize">
+          <code class="p">capitalize</code>
+          Es una palabra clave que convierte la primera letra de cada palabra a
+          mayúscula. Otros caracteres permanecen sin cambios (conservan su caso
+          original tal como está escrito en el texto del elemento). Una letra se
+          define como un carácter que forma parte de las categorías generales
+          Letra o Número de Unicode.Experimental; por lo tanto, se ignoran los
+          signos de puntuación o símbolos al principio de una palabra.
+        </p>
+        <img src="img/capi2.png" width="550" />
+        <img src="img/capi.png" width="300" />
+
+        <p class="uppercase">
+          <code class="p">uppercase</code> Es una palabra clave que convierte
+          todos los caracteres a mayúsculas.
+        </p>
+        <img src="img/uppercase.png" width="300" /> <br />
+        <strong>lowercase</strong>
+        <p class="lowercase">
+          <code class="p">lowercase</code> Es una palabra clave que convierte
+          todos los caracteres a minúsculas. <br />
+          ESTE ES UN EJEMPLO DE ELLO
+        </p>
+        <img src="img/lower.png" width="500" />
+        <img src="img/lower2.png" width="300" />
+        <p class="none">
+          <code class="p">none</code> Es una palabra clave que evita que se
+          cambien las mayúsculas y minúsculas de todos los caracteres.
+        </p>
+        <h2>font-size</h2>
+        <p class="size">
+          La propiedad <code class="p">font-size</code> CSS establece el tamaño
+          de la fuente. Cambiar el tamaño de fuente también actualiza los
+          tamaños de las unidades relativas al tamaño de fuente, como ,
+          <code class="p">&lt;length&gt;</code>
+          <code class="p">em</code> <code class="p">es</code>
+        </p>
+        <p>
+          La <code class="p">6.-font-size</code> propiedad se especifica de una
+          de las siguientes maneras:
+        </p>
+        <ul>
+          <li>
+            Como uno de los de tamaño absoluto, tamaño relativo o
+            <code class="p">&lt;math&gt;</code>
+            palabras clave
+          </li>
+          <li>
+            Como <code class="p">&lt;length&gt;</code>a
+            <code class="p">&lt;percentage&gt;</code>, en relación con el tamaño
+            de fuente del elemento.
+          </li>
+        </ul>
+        <p>
+          Palabras clave de tamaño absoluto, basadas en el tamaño de fuente
+          predeterminado del usuario (que es medium).
+        </p>
+
+        <p class="xx-small">Este es un jemplo utilizando xx-small</p>
+        <p class="x-small">Este es un jemplo utilizando x-small</p>
+        <p class="small">Este es un jemplo utilizando small</p>
+        <p class="medium">Este es un jemplo utilizando medium</p>
+        <p class="large">Este es un jemplo utilizando large</p>
+        <p class="x-large">Este es un jemplo utilizando x-large</p>
+        <p class="xx-large">Este es un jemplo utilizando xx-large</p>
+        <h3>Pixeles</h3>
+        <p class="px">
+          Establecer el tamaño de fuente en valores de píxeles ( px) es una
+          buena opción cuando necesita precisión de píxeles. Un valor de px es
+          estático. Esta es una forma independiente del sistema operativo y en
+          todos los navegadores de decirles literalmente a los navegadores que
+          representen las letras exactamente con la cantidad de píxeles de
+          altura que usted especificó. Los resultados pueden variar ligeramente
+          entre navegadores, ya que pueden utilizar diferentes algoritmos para
+          lograr un efecto similar.
+        </p>
+        <img src="img/pixel.png" width="300" />
+        <h3>ems</h3>
+        <p class="ems">
+          El uso de un em valor crea un tamaño de fuente dinámico o calculado
+          (históricamente, la emunidad se derivaba del ancho de una "M"
+          mayúscula en un tipo de letra determinado). El valor numérico actúa
+          como multiplicador de la font-sizepropiedad del elemento sobre el que
+          se utiliza.
+        </p>
+        <img src="img/ems.png" width="300" />
+        <h2>7.-Letter-spacing</h2>
+        <strong>¿Que es letter-spacing?</strong>
+        <p>
+          La propiedad CSS establece el comportamiento del espaciado horizontal
+          entre caracteres de texto. Este valor se agrega al espacio natural
+          entre caracteres mientras se representa el texto. Los valores
+          positivos de hacen que los personajes se separen más, mientras que los
+          valores negativos de los acercan.
+        </p>
+        <h3>letter-spacing: normal;</h3>
+        <p>
+          <code class="p">normal</code>
+          El espacio entre letras normal para la fuente actual. A diferencia de
+          un valor de 0, esta palabra clave permite al agente de usuario alterar
+          el espacio entre caracteres para justificar el texto.
+        </p>
+        <img src="img/spacing1.png" width="350" />
+        <img src="img/spacing1-2.png" width="200" />
+        <img src="img/spacing.png" width="620" />
+        <h3>length</h3>
+        <p>
+          Especifica un espacio adicional entre caracteres además del espacio
+          predeterminado entre caracteres. Los valores pueden ser negativos,
+          pero puede haber límites específicos de la implementación. Los agentes
+          de usuario no pueden aumentar ni disminuir más el espacio entre
+          caracteres para justificar el texto.
+        </p>
+        <p class="length">
+          letter-spacing: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Rem obcaecati aut nemo dignissimos accusamus? Omnis, nemo quo.
+          Alias, repudiandae doloremque a voluptas architecto maxime eum quaerat
+          consequuntur maiores voluptatem aperiam!
+        </p>
+        <img src="img/length.png" width="300" />
+        <p class="length2">
+          letter-spacing: Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Eum, ducimus sapiente! Doloribus praesentium impedit dolorem,
+          amet iste similique tempora vero id nam consectetur molestiae illo
+          sapiente vel quaerat accusantium totam?
+        </p>
+        <img src="img/length2.png" width="300" />
+        <p class="length3">
+          letter-spacing: Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Voluptatum voluptas ex similique iure at! Saepe quod optio
+          magnam nisi cupiditate eligendi pariatur quas ratione nostrum cum,
+          repudiandae dolores iste laudantium!
+        </p>
+        <img src="img/length3.png" width="480" height="200" />
+        <h3>Global values</h3>
+        <p class="global">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+          doloribus aut nam rerum eaque rem laudantium numquam natus quibusdam
+          ipsa, veniam, saepe, nihil quisquam cupiditate nisi sed mollitia!
+          Repudiandae, exercitationem.
+        </p>
+        <img src="img/global.png" width="300" />
+        <p class="global2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dicta
+          soluta necessitatibus molestias distinctio dolores minus! Fuga quam
+          corporis dolores quos sit dicta quaerat eius aliquam. Exercitationem,
+          adipisci culpa. Dignissimos!
+        </p>
+        <img src="img/global2.png" width="300" />
+        <h2>8.-line-height</h2>
+        <strong>¿Que es line-height?</strong>
+        <p>
+          La propiedad CSS establece la altura de un cuadro de línea. Se usa
+          comúnmente para establecer la distancia entre líneas de texto. En
+          elementos a nivel de bloque, especifica la altura mínima de los
+          cuadros de línea dentro del elemento. En elementos en línea no
+          reemplazados , especifica la altura que se utiliza para calcular la
+          altura del cuadro de línea
+        </p>
+        <h3>Normal</h3>
+        <p>
+          <code class="p">normal</code>Depende del agente de usuario. Los
+          navegadores de escritorio (incluido Firefox) utilizan un valor
+          predeterminado de aproximadamente 1.2, dependiendo del elemento
+          font-family.
+        </p>
+        <p class="height-normal">
+          Este es un ejempplo <br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odit
+          sapiente, eos possimus architecto tempora beatae quibusdam reiciendis
+          voluptatem enim deleniti autem provident nobis eum quidem, aperiam
+          magnam, facere minus?
+        </p>
+        <img src="img/height-normal.png" width="300" />
+        <h3>Number</h3>
+        <p>
+          <code class="p">number</code> (sin unidades) El valor utilizado es
+          este sin unidades <code class="p">number</code> multiplicado por el
+          tamaño de fuente del propio elemento. El valor calculado es el mismo
+          que el especificado <code class="p">number</code>. En la mayoría de
+          los casos, esta es la forma preferida de configurar line-heighty
+          evitar resultados inesperados debido a la herencia. <br />
+          Este es un ejemplo
+        </p>
+
+        <p class="height-number">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+          dolores et reiciendis dolor ipsum natus quo accusantium laborum labore
+          dicta, qui a esse pariatur, magni inventore eveniet? Atque, magni.
+          Amet!, Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Eveniet quas ex soluta incidunt perferendis quia obcaecati
+          exercitationem, error impedit perspiciatis maiores animi adipisci?
+          Esse et aperiam blanditiis culpa. Blanditiis, cupiditate!
+        </p>
+        <img src="img/height-number.png" width="300" />
+        <h3>Length</h3>
+        <p>
+          <code class="p">length</code>
+          Lo especificado <code class="p">length</code> se utiliza en el cálculo
+          de la altura del cuadro de línea. Los valores dados en unidades em
+          pueden producir resultados inesperados (consulte el ejemplo a
+          continuación).
+        </p>
+        <p class="height-length">
+          ESte es un ejemplo: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Impedit, molestias. Ullam unde nemo qui quibusdam voluptate quis
+          neque, dignissimos ab inventore nesciunt eum possimus autem reiciendis
+          nulla explicabo magni consectetur? Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Quaerat dolore laudantium architecto
+          nostrum illum doloremque odio nesciunt non sit eos et quis, asperiores
+          eaque nemo voluptates corporis eveniet repellat! Incidunt!
+        </p>
+        <img src="img/height-length.png" width="500" height="250" />
+
+        <h3>Percentage</h3>
+        <p>
+          <code class="p">percentage</code>
+          Relativo al tamaño de fuente del propio elemento. El valor calculado
+          se <code class="p">percentage</code>multiplica por el tamaño de fuente
+          calculado del elemento. Los valores porcentuales pueden producir
+          resultados inesperados
+        </p>
+        <p class="height-percentage">
+          Este es un ejemplo: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Asperiores nemo iure laudantium quo eligendi porro eveniet eius
+          minima. Temporibus hic accusamus totam ipsa quidem reprehenderit
+          voluptates veniam quos qui quas?
+        </p>
+        <img src="img/height-percentage.png" width="300" />
+        <h2>9.-Text-align</h2>
+        <strong>¿Que es text-align</strong>
+        <p>
+          La propiedad CSS establece la alineación horizontal del contenido de
+          nivel en línea dentro de un elemento de bloque o cuadro de celda de
+          tabla.
+        </p>
+        <h3>text-align: start</h3>
+        <p>
+          Lo mismo que left si la dirección es de izquierda a derecha y rightsi
+          la dirección es de derecha a izquierda.
+        </p>
+        <p class="text-start">
+          Este es un ejemplo: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quaerat qui eligendi animi nostrum doloribus eius laborum.
+          Beatae sapiente necessitatibus facere id temporibus non error!
+          Similique reprehenderit commodi asperiores quam ut.
+        </p>
+        <img src="img/text-start.png" width="300" />
+        <h3>text-align: end</h3>
+        <p>
+          Lo mismo que rightsi la dirección es de izquierda a derecha y leftsi
+          la dirección es de derecha a izquierda.
+        </p>
+        <p class="text-end">
+          Este es un ejemplo: Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Asperiores enim assumenda, quia ducimus recusandae
+          quasi omnis eos quas, sit, a eum quidem totam optio eveniet soluta
+          mollitia numquam eligendi nihil
+        </p>
+        <img src="img/text-end.png" width="300" />
+        <h3>text-align: left</h3>
+        <p>
+          El contenido en línea está alineado con el borde izquierdo del cuadro
+          de línea.
+        </p>
+        <p class="text-left">
+          ESte es un ejemplo: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Molestiae tenetur deserunt dolore quibusdam dicta laudantium sed
+          iste error possimus. Eos doloribus ullam perspiciatis exercitationem
+          dolor cum nihil consequuntur error ex.
+        </p>
+        <img src="img/text-left.png" width="300" />
+        <h3>text-align: right</h3>
+        <p>
+          El contenido en línea está alineado con el borde derecho del cuadro de
+          línea.
+        </p>
+        <p class="text-rigth">
+          Este es un ejemplo: Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Iusto corrupti repellat modi totam vitae quidem, ab, distinctio
+          amet ullam cum, aliquam officiis cupiditate ea eum sint dicta sed
+          consequatur obcaecati.
+        </p>
+        <img src="img/text-rigth.png" width="300" />
+        <h3>text-align: center</h3>
+        <p>El contenido en línea está centrado dentro del cuadro de línea.</p>
+        <p class="text-center">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eum
+          earum facilis reiciendis inventore ullam explicabo voluptatum
+          voluptate aut molestias eaque quaerat, perferendis quas modi, incidunt
+          reprehenderit asperiores velit. Aliquid!.
+        </p>
+        <img src="img/text-center.png" width="300" />
+        <h3>text-align: justify</h3>
+        <p>
+          Los contenidos en línea están justificados. El texto debe estar
+          espaciado para alinear sus bordes izquierdo y derecho con los bordes
+          izquierdo y derecho del cuadro de línea, excepto la última línea.
+        </p>
+        <p class="text-justify">
+          Este es un ejemplo con texto justificado, Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Adipisci officiis, amet doloribus totam
+          dolorum voluptas voluptatum repudiandae maiores deleniti.
+          Reprehenderit iusto debitis reiciendis mollitia rerum fuga ea maxime
+          recusandae excepturi. Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Ea, similique tenetur ducimus aspernatur modi veniam
+          excepturi, maiores unde, rem ipsa voluptates sapiente minima
+          reprehenderit fugit dolorem incidunt! Debitis, labore cum.
+        </p>
+        <img src="img/text-justify.png" width="300" />
+       
+      </section>
+    </article>
+  </body>
+</html>
