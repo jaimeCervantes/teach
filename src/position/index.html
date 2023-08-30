@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position CSS</title>
+    <style>
+      h1 {
+        color: black;
+        background-color: aqua;
+        text-align: center;
+      }
+      h2 {
+        color: black;
+        background-color: chartreuse;
+        text-align: center;
+      }
+      h3 {
+        color: black;
+        font-size: 18px;
+        text-align: center;
+        background-color: aquamarine;
+      }
+      p {
+        color: black;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .p {
+        display: inline-block;
+        padding: 0.5rem;
+        color: #5da7cf;
+        background: rgba(153, 128, 250, 0.1);
+      }
+      .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+        color: white;
+      }
+
+      #two {
+        position: static;
+        background: blue;
+      }
+
+      #seven {
+        position: relative;
+        top: 40px;
+        left: 40px;
+        background: blue;
+      }
+
+      #thirteen {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        background: blue;
+      }
+      #twenty {
+        position: sticky;
+        top: 20px;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Element Position</h1>
+      <section>
+        <h2>Position</h2>
+        <img src="img/position.png" width="900" height="350" />
+        <p>
+          La propiedad <code class="p">position</code>de CSS especifica cómo se
+          posiciona un elemento en el documento. Las propiedades top, right,
+          bottom, y leftdeterminan la ubicación final de los elementos
+          posicionados.
+        </p>
+        <p>
+          La mayoría de las veces, los elementos absolutamente posicionados que
+          tienen su height y width establecidos en autoson ajustados hasta
+          acomodarse a su contenido. Sin embargo, los elementos no reemplazados
+          y absolutamente posicionados se pueden crear para llenar el espacio
+          vertical disponible, especificando tanto topcomo bottom, y dejando
+          height sin especificar (es decir, auto). De igual manera se pueden
+          utilizar para llenar el espacio horizontal disponible especificando
+          tanto leftcomo right, y dando a widthel valor de auto.
+        </p>
+        <h3>top</h3>
+        <p>
+          La propiedad CSS participa en la especificación de la posición
+          vertical de un elemento posicionado . No tiene ningún efecto sobre
+          elementos no posicionados
+        </p>
+        <h3>left</h3>
+        <p>
+          La propiedad CSS participa en la especificación de la posición
+          horizontal de un elemento posicionado . No tiene ningún efecto sobre
+          elementos no posicionados
+        </p>
+        <h3>botton</h3>
+        <p>
+          La propiedad CSS participa en el establecimiento de la posición
+          vertical de un elemento posicionado . No tiene ningún efecto sobre
+          elementos no posicionados.
+        </p>
+        <h3>Right</h3>
+        <p>
+          La propiedad CSS participa en la especificación de la posición
+          horizontal de un elemento posicionado . No tiene ningún efecto sobre
+          elementos no posicionados
+        </p>
+        <h2>Static</h2>
+        <p>
+          El elemento está posicionado de acuerdo al flujo normal del documento.
+          Las propiedades top, right, bottom, left y no tienen efecto . Este es
+          el valor por defecto.z-index
+        </p>
+        <div class="box" id="one">One</div>
+        <div class="box" id="two">
+          Two <br />
+          Utilizando element Static
+        </div>
+        <div class="box" id="three">Three</div>
+        <div class="box" id="four">Four</div>
+        <div>
+          <img src="img/two.png" width="300" />
+        </div>
+        <h2>Relative</h2>
+        <p>
+          El elemento está posicionado de acuerdo al flujo normal del documento,
+          y luego es desplazado con relación a sí mismo , con base en los
+          valores de top, right, bottom, y left. El desplazamiento no afecta la
+          posición de ningún otro elemento; por lo que, el espacio que se le da
+          al elemento en el esquema de la página es el mismo como si la posición
+          fuera static. Este valor crea un nuevo contexto de apilamiento , donde
+          el valor de z-indexno es auto. El efecto que tiene relativesobre los
+          elementos table-*-group, table-row, table-column, table-cell, y
+          table-captionno está definido.
+        </p>
+        <div class="box" id="five">Five</div>
+        <div class="box" id="six">Six</div>
+        <div class="box" id="seven">Seven Utilizando element Relative</div>
+        <div class="box" id="eight">eight</div>
+        <br />
+        <img src="img/seven.png" width="300" />
+
+        <h2>Absolute</h2>
+        <p>
+          El elemento es eliminado del flujo normal del documento, sin crearse
+          espacio alguno para el elemento en el esquema de la página. Es
+          posicionado relativo a su ancestro posicionado más cercano, si lo hay;
+          de lo contrario, se ubica relativo al bloque contenedor
+          (en-US)inicial. Su posición final está determinada por los valores de
+          top, right, bottom, y left. Este valor crea un nuevo contexto de
+          apilamiento cuando el valor de z-indexno es auto. Elementos
+          absolutamente posicionados pueden tener margen, y no colapsan con
+          ningún otro margen.
+        </p>
+
+        <a href="absolute.html">ejemplo de absolute</a> <br />
+        <img src="img/box.png" width="300" />
+        <img src="img/absolute.png" width="300" />
+
+        <h2>Fixed</h2>
+        <p>
+          El elemento es eliminado del flujo normal del documento, sin crearse
+          espacio alguno para el elemento en el esquema de la página. Está
+          posicionado con relación al bloque contenedor (en-US)inicial
+          establecido por el viewport , excepto cuando uno de sus ancestros
+          tiene una propiedad transform, perspective, o filterestablecido en
+          algo que no sea none(ver CSS Transforms Spec ), en cuyo caso ese
+          ancestro se comporta como el bloque contenedor. (Notar que hay
+          inconsistencias del navegador con perspectivey filtercontribuyendo a
+          la formación del bloque contenedor.) Su posición final está
+          determinada por los valores de top, right, bottom, y left. Estos
+          valores siempre crean un nuevo contexto de apilamiento . En documentos
+          impresos, el elemento se coloca en la misma posición en cada página .
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab sapiente
+          incidunt rem quae quidem accusantium minima, iste dolorem harum sed
+          molestias a esse distinctio magnam aliquam assumenda veniam ad itaque.
+        </p>
+
+        <div class="box" id="thirteen">thirteen utilizando element fixed</div>
+        <div class="box" id="fourteen">Fourten</div>
+        <div class="box" id="fifteen">Fifteen</div>
+        <div class="box" id="sixteen">sixteen</div>
+        <br />
+        <img src="img/thirteen.png" width="300" />
+        <h2>Sticky</h2>
+        <p>
+          El elemento está posicionado de acuerdo al flujo normal del documento,
+          y luego es desplazado con relación a su ancestro que se desplaza más
+          cercano y su bloque contenedor (en-US)(ancestro en nivel de bloque más
+          cercano) incluyendo elementos relacionados a tablas, basados ​​en los
+          valores de top, right, bottom, y left. El desplazamiento no afecta la
+          posición de ningún otro elemento.
+        </p>
+        <p>
+          El posicionamiento fijo se puede considerar como un híbrido de
+          posicionamiento relativo y fijo cuando su ancestro de desplazamiento
+          más cercano es la ventana gráfica. Un elemento en posición fija se
+          trata como relativamente posicionado hasta que cruza un umbral
+          específico, momento en el cual se trata como fijo hasta que alcanza el
+          límite de su padre.
+        </p>
+
+        <div class="box" id="seventeen">Seventeen</div>
+        <div class="box" id="eighteen">Eighteen</div>
+        <div class="box" id="nineteen">Nineteen</div>
+        <div class="box" id="twenty">twenty utilizando element sticky</div>
+
+        <img src="img/twenty.png" width="300" />
+      </section>
+    </article>
+  </body>
+</html>
