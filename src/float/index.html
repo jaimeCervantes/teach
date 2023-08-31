@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: black;
+        background-color: chartreuse;
+        font-size: xx-large;
+        text-align: center;
+      }
+      p {
+        color: black;
+        font-family: "Courier New", Courier, monospace;
+        text-align: justify;
+        padding: 0.5rem;
+      }
+      h2 {
+        text-align: center;
+        font-size: x-large;
+      }
+      h3 {
+        font-size: 23px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      .p {
+        padding: 0 0.6em;
+        color: #9980fa;
+        background: rgba(153, 128, 250, 0.1);
+        border-radius: 2px;
+        font-family: monospace;
+      }
+
+      .right {
+        float: right;
+        margin-inline-start: 0.5rem;
+        margin-block-start: 0.5rem;
+        background: pink;
+      }
+
+      .left {
+        float: left;
+        margin-inline-end: 0.5rem;
+        margin-block-end: 0.5rem;
+        margin-block: 0.3rem;
+        background: cyan;
+      }
+
+      .none {
+        float: none;
+      }
+
+      .comandos {
+        border: 1px solid blue;
+        width: 100%;
+        float: left;
+      }
+
+      div {
+        margin: 5px;
+        width: 80px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Float</h1>
+        <p>
+          <img class="left" src="img/CSS3.jpg" width="240" />
+          Es una propiedad CSS coloca un elemento en el lado izquierdo o derecho
+          de su contenedor, lo que permite que el texto y los elementos en línea
+          se ajusten a su alrededor. Dicha propiedad nos ayuda a organizar las
+          imagenes es decir ayuda a no verse muy amontonadas.
+        </p>
+
+        <p>
+          <code class="p">left</code>
+          El elemento debe flotar en el lado izquierdo de su bloque contenedor.
+
+          <code class="p">right</code>
+          El elemento debe flotar en el lado derecho de su bloque contenedor.
+          <code class="p">none</code>
+          El elemento no debe flotar.
+
+          <code class="p">inline-start</code>
+          El elemento debe flotar en el lado inicial de su bloque contenedor.
+          Ese es el lado izquierdo con <code class="p">ltr</code>guiones y el
+          lado derecho con <code class="p">rtl</code>guiones.
+
+          <code class="p">inline-end</code>
+          El elemento debe flotar en el lado final de su bloque contenedor. Ese
+          es el lado derecho con <code class="p">ltr</code>guiones y el lado
+          izquierdo con rtl<code class="p">rtl</code> guiones.
+        </p>
+
+        <p>
+          Los elementos flotantes se colocan como se mencionó anteriormente,
+          cuando un elemento flota, se retira del flujo normal del documento
+          (aunque sigue siendo parte de él). Se desplaza hacia la izquierda o
+          hacia la derecha, hasta que toca el borde del cuadro que lo contiene u
+          otro elemento flotante .
+        </p>
+      </section>
+      <section>
+        <h2>A continuacion haremos un ejemplo utlizando la propiedad float</h2>
+        <h3>Pensemos un poco de que hacen los de sistemas</h3>
+        <p>
+          Solo el pensamiento de aprender a programar puede ser muy intimidante.
+          La palabra programar es misteriosa por definición. Eso implica una
+          forma técnica de comunicación que las computadoras, y no los humanos,
+          deben entender.
+        </p>
+        <h4>Arquitectura computacional</h4>
+        <p>
+          <img class="left" src="img/Wiki-background.jpg" width="300" />
+
+          seguido de esto hay quienes creen que programar es saberlo todo y no
+          precisamente puesto que dentro de la ingenieria existen varias ramas
+          como la arquitectura , dentro de esta podemos hablar de La parte más
+          importante de tu computadora son los microchips (también conocidos
+          como circuitos integrados).
+          <img
+            class="right"
+            src="img/toshiba-storagetrends2023.jpg"
+            width="300"
+          />
+
+          Otro componente con el que seguramente está familiarizado: el disco
+          duro. En nuestra analogía del cerebro, esto representa la memoria a
+          largo plazo. Un disco duro es un dispositivo interno o externo que
+          almacena datos que deberían persistir incluso después de apagar la
+          computadora.
+        </p>
+        <p>
+          Un disco duro es como un archivero en el que almacenas libros (cientos
+          o miles). La RAM, por su parte, es el escritorio en el que trabajas
+          con cierta cantidad de libros de manera simultánea (10, 20 o un poco
+          más).
+        </p>
+
+        <section class="comandos">
+          <div class="left">¿que es una linea de comandos?</div>
+
+          <p>
+            La Línea de Comandos puede resultar intimidante a primera vista. A
+            menudo aparece en las películas como una pantalla negra críptica con
+            texto, números y símbolos incomprensibles que se desplazan. Por lo
+            general, se asocia con un pirata informático malvado o un compañero
+            genio de la tecnología.
+          </p>
+        </section>
+        <h4>Mitos</h4>
+        <p>
+          <img class="left" src="img/antro-jovenes.jpg" width="120" />
+          Ingeniería en Sistemas Computacionales se requiere de ciertas
+          competencias, habilidades y conocimientos, así como una fuerte
+          vocación de estudio y aprendizaje, ya que el campo laboral de ésta
+          implica la resolución de problemas complejos y la creación de
+          estrategias y proyectos. Sin embargo, esto no significa que todos los
+          estudiantes de esta opción académica sean nerds. Y es que hay quienes
+          afirman que quienes estudian esta carrera son personas altamente
+          sedentarias que no salen de su hogar y pasan todo el día estudiando,
+          jugando videojuegos o leyendo historietas, algo que ciertamente es muy
+          falso.
+        </p>
+        <p>
+          <img class="left" src="img/face.jpg" width="150" />
+          <code class="p">Hackear Facebook </code>
+          Seguramente has visto en muchas películas que los ingenieros en
+          sistemas computacionales son contratados por organizaciones para
+          hackear información de corporaciones poderosas o, sencillamente,
+          infiltrarse en las cuentas personales de cualquier individuo. Y, si
+          bien existen ingenieros capaces de hacer esto, definitivamente no es
+          algo que hagamos todos, ni mucho menos estudiamos la carrera para
+          esto.
+        </p>
+        <h2>Codigo float</h2>
+        <p>Regresando a float, a continuacion se muestra el codigo utilizado</p>
+        <img class="left" src="img/left.png" width="320" />
+        <img class="none" src="img/html.png" width="450" height="300" />
+        <img class="right" src="img/right.png" width="320" />
+      </section>
+    </article>
+  </body>
+</html>
